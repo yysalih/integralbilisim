@@ -186,8 +186,12 @@ Aynı ekranda **Environment variables** bölümüne ekleyin:
 
 | Değişken | Ne için |
 |---|---|
-| \`RESEND_API_KEY\` | Form e-postaları |
-| \`CONTACT_FROM_EMAIL\` | Gönderen adresi, ör. \`bildirim@integralbilisim.com\` (aşağıya bakın) |
+| \`SMTP_HOST\` | E-posta sunucusu, ör. \`mail.integralbilisim.com\` |
+| \`SMTP_PORT\` | \`465\` (SSL) ya da \`587\` (STARTTLS) |
+| \`SMTP_SECURE\` | 465 için \`true\`, 587 için \`false\` |
+| \`SMTP_USER\` | Gönderim yapacak e-posta hesabı, ör. \`bildirim@integralbilisim.com\` |
+| \`SMTP_PASS\` | O hesabın şifresi |
+| \`SMTP_FROM\` | (İsteğe bağlı) gönderen adres; boşsa \`SMTP_USER\` kullanılır |
 | \`CONTACT_TO_EMAIL\` | Formların düşeceği adres (varsayılan: info@integralbilisim.com) |
 | \`PSI_API_KEY\` | Site analizi aracındaki hız ölçümü |
 | \`SUPABASE_URL\` | Blog ve lead veritabanı |
@@ -196,13 +200,22 @@ Aynı ekranda **Environment variables** bölümüne ekleyin:
 
 \`PORT\` tanımlamayın; panel kendisi atar.
 
-**Resend gönderen adresi:** \`CONTACT_FROM_EMAIL\` boş kalırsa \`onboarding@resend.dev\`
-kullanılır. Resend bu test adresinden yalnızca Resend hesabının sahibine e-posta
-gönderir; \`info@integralbilisim.com\` adresine giden mailler reddedilir. Resend
-panelinde **Domains** bölümünden integralbilisim.com'u ekleyip verdiği DNS
-kayıtlarını DirectAdmin > DNS Management'a girin, doğrulandıktan sonra
-\`CONTACT_FROM_EMAIL\` değişkenini bu domain'den bir adresle tanımlayın.
+**SMTP hesabı:** DirectAdmin > **E-Mail Accounts** bölümünden form bildirimleri
+için ayrı bir hesap açmanızı öneririz (ör. \`bildirim@integralbilisim.com\`).
+Sunucu adı genellikle \`mail.integralbilisim.com\` olur; port ve SSL ayarını aynı
+ekrandaki "Mail Client Settings" bilgisinden kontrol edin. Gönderen adres bu
+hesapla aynı domain'de olmalıdır; aksi halde sunucu iletiyi reddedebilir.
+Bildirimleri Gmail gibi dış bir adrese yönlendirecekseniz DirectAdmin'de bu
+domain için DKIM'in açık olduğundan emin olun, yoksa iletiler spam'e düşebilir.
 (Mail gitmese bile talepler Supabase'deki \`leads\` tablosuna kaydedilir.)
+
+Test edilen değerler: sunucu \`mail.integralbilisim.com\`, 465 (SSL) ve 587
+(STARTTLS) açık, SSL sertifikası bu adı kapsıyor.
+
+**Mail gitmiyorsa:** uygulama log'unda \`[mail] Gönderilemedi: connect ETIMEDOUT\`
+ya da \`ECONNREFUSED\` görüyorsanız sunucunun güvenlik duvarı uygulamanın SMTP
+portlarına çıkmasını engelliyor olabilir. Bu durumda \`SMTP_HOST=localhost\` ve
+\`SMTP_TLS_SERVERNAME=mail.integralbilisim.com\` tanımlayıp uygulamayı yeniden başlatın.
 
 ## 5. Başlatın ve kontrol edin
 **Start App** deyin, sonra:

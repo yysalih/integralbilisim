@@ -218,38 +218,20 @@ export const sendAuditLead = createServerFn({ method: "POST" })
       consentMarketing: data.consentMarketing,
     });
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const to = process.env.CONTACT_TO_EMAIL ?? "info@integralbilisim.com";
-    const from = process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
-    if (!apiKey) {
-      console.error("[site-analizi] RESEND_API_KEY tanımlı değil; lead iletilemedi.");
-      return { ok: false as const };
-    }
-
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        from: `İntegral Bilişim Web <${from}>`,
-        to: [to],
-        reply_to: data.email,
-        subject: `[Site Analizi · ${data.score}/100] ${new URL(data.targetUrl).hostname}`,
-        text: [
-          `Analiz edilen site: ${data.targetUrl}`,
-          `Skor: ${data.score}/100`,
-          `Kritik bulgu sayısı: ${data.criticalCount}`,
-          "",
-          `E-posta: ${data.email}`,
-          `KVKK onayı: evet · Ticari ileti izni: ${data.consentMarketing ? "evet" : "hayır"}`,
-          `Gönderim: ${new Date().toISOString()}`,
-        ].join("\n"),
-      }),
+    const { sendMail } = await import("@/lib/mailer.server");
+    return sendMail({
+      subject: `[Site Analizi · ${data.score}/100] ${new URL(data.targetUrl).hostname}`,
+      replyTo: data.email,
+      text: [
+        `Analiz edilen site: ${data.targetUrl}`,
+        `Skor: ${data.score}/100`,
+        `Kritik bulgu sayısı: ${data.criticalCount}`,
+        "",
+        `E-posta: ${data.email}`,
+        `KVKK onayı: evet · Ticari ileti izni: ${data.consentMarketing ? "evet" : "hayır"}`,
+        `Gönderim: ${new Date().toISOString()}`,
+      ].join("\n"),
     });
-    if (!res.ok) {
-      console.error("[site-analizi] Resend hatası:", res.status, await res.text());
-      return { ok: false as const };
-    }
-    return { ok: true as const };
   });
 
 const PSI_ENDPOINT = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed";

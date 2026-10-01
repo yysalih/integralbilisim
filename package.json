@@ -23,6 +23,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.575.0",
     "node-html-parser": "^9.0.4",
+    "nodemailer": "^10.0.13",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.5.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.16.5",
+    "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.2.0",
