@@ -19,7 +19,7 @@ const STATS: { value: number | null; display?: string; suffix?: string; label: s
   },
   { value: REFERENCES.length, suffix: "", label: "marka referansı", note: "Türkiye geneli" },
   { value: SERVICES.length, suffix: "", label: "dijital hizmet", note: "tek elden" },
-  { value: null, display: "2-3", suffix: " gün", label: "yayına alma", note: "hazır web sitesinde" },
+  { value: null, display: "5", suffix: " gün", label: "yayına alma", note: "hazır web sitesinde" },
 ];
 
 export function ProofStrip() {

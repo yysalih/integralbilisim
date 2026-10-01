@@ -1,4 +1,4 @@
 Contact: mailto:info@integralbilisim.com
-Expires: 2027-10-01T10:14:10Z
+Expires: 2027-10-01T10:37:08Z
 Preferred-Languages: tr, en
 Canonical: https://integralbilisim.com/.well-known/security.txt

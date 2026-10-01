@@ -178,6 +178,10 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     works: ["Maderia", "Turkey Travel Agent"],
     faqs: [
       {
+        q: "Hazır site kaç günde yayına alınır?",
+        a: "Hazır web sitesi çözümlerimizde siteniz 5 gün içinde yayına alınır.",
+      },
+      {
         q: "Hazır sitemi kendim güncelleyebilir miyim?",
         a: "Evet. Türkçe yönetim paneliyle kod bilmeden hizmet ekleyebilir, referans yükleyebilir ve iletişim bilgilerinizi değiştirebilirsiniz.",
       },
@@ -863,14 +867,14 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 };
 
 /**
- * Web hizmetlerinin süreci. Ana sayfadaki adımlardan alındı; son adımdaki
- * yayın süresi iddiası, kaynaklar arasında çelişki çözülene kadar çıkarıldı.
+ * Web hizmetlerinin süreci; ana sayfadaki adımlarla aynı. Yayın süresi (5 gün)
+ * firma tarafından teyit edildi (eski sitede 7 iş günü yazıyordu).
  */
 const WEB_PROCESS: ServiceStep[] = [
   { title: "Görüşme & Analiz", detail: "İhtiyacınızı dinliyor, sektörünüze ve hedef kitlenize en uygun çözümü birlikte belirliyoruz." },
   { title: "Tasarım", detail: "Kullanıcı deneyimini ön planda tutarak estetik, işlevsel ve mobil uyumlu web siteleri tasarlıyoruz." },
   { title: "İçerik & Kurulum", detail: "Domain, hosting, içerik, kurumsal e-posta ve teknik destek dahil; tüm ihtiyaçlarınız tek elden karşılanır." },
-  { title: "Yayın & Destek", detail: "Sitenizi yayına alıyor, sonrasında yıl boyu teknik destekle yanınızdayız." },
+  { title: "Yayın & Destek", detail: "Hazır web sitesi çözümlerinde siteniz 5 gün içinde yayında olur; sonrasında yıl boyu teknik destekle yanınızdayız." },
 ];
 
 const WEB_SERVICES = new Set(["web-tasarim", "hazir-web-site", "e-ticaret-web-siteleri"]);

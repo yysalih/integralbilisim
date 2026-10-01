@@ -57,11 +57,11 @@ export const SERVICES: ServiceMeta[] = [
       "Kodlama veya tasarım derdi olmadan, size özel tasarımlar ve kolay yönetim avantajıyla markanızı hemen online yapın.",
     long: [
       "Her sektöre uygun, anahtar teslim web siteleri. Alan adından tasarıma, yayına almaktan mobil uyuma kadar her şeyi biz üstleniyoruz.",
-      "Hazır web sitesi çözümlerimizle siteniz 2-3 gün içinde yayında olur. Domain, hosting, içerik girişi, kurumsal e-posta ve teknik destek pakete dahildir. Tüm ihtiyaçlarınız tek elden, profesyonel bir yaklaşımla karşılanır.",
+      "Hazır web sitesi çözümlerimizle siteniz 5 gün içinde yayında olur. Domain, hosting, içerik girişi, kurumsal e-posta ve teknik destek pakete dahildir. Tüm ihtiyaçlarınız tek elden, profesyonel bir yaklaşımla karşılanır.",
       "Hazır siteler yazılım bilgisi gerektirmez. Site ön yüzünde görünen tüm alanları hazır site admin panelinden yönetebilirsiniz. Hazır sitelerde olmayan özellikleri de ekleme olanağınız vardır.",
     ],
     includes: [
-      { label: "2-3 Günde Yayında", detail: "Sektörünüze uygun sitenizin hızlı kurulumu ve teslimi." },
+      { label: "5 Günde Yayında", detail: "Sektörünüze uygun sitenizin hızlı kurulumu ve teslimi." },
       { label: "Domain + Hosting", detail: "Alan adı kaydı ve barındırma pakete dahil." },
       { label: "Kurumsal E-posta", detail: "Şirket adınıza özel e-posta adresleri." },
       { label: "Kolay Yönetim", detail: "Kolay ve anlaşılabilir admin panel; yazılım bilgisi gerektirmez." },

@@ -67,7 +67,7 @@
 
 ## Sık sorulan sorular
 ### Sitem ne kadar sürede yayına girer?
-Hazır web sitesi çözümlerimizde siteniz 2-3 gün içinde yayına alınır. Özel tasarım projelerinde süre, işin kapsamına göre değişir.
+Hazır web sitesi çözümlerimizde siteniz 5 gün içinde yayına alınır. Özel tasarım projelerinde süre, işin kapsamına göre değişir.
 
 ### Alan adı ve hosting pakete dahil mi?
 Evet. Domain kaydı, güvenilir hosting, SSL sertifikası ve kurumsal e-posta adresleri pakete dahildir. Yenileme takibini de biz yaparız.

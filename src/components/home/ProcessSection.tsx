@@ -29,7 +29,7 @@ const STEPS = [
     accent: "#10B981",
     title: "Yayın & Destek",
     detail:
-      "Hazır web sitesi çözümlerinde siteniz 2-3 gün içinde yayında olur; sonrasında teknik destekle yanınızdayız.",
+      "Hazır web sitesi çözümlerinde siteniz 5 gün içinde yayında olur; sonrasında teknik destekle yanınızdayız.",
   },
 ];
 

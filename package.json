@@ -11,7 +11,8 @@
     "brand": "tsx scripts/gen-brand-assets.ts",
     "pack:directadmin": "node scripts/pack-directadmin.mjs",
     "seed": "tsx scripts/seed-posts.ts",
-    "test:redirects": "node scripts/test-redirects.mjs"
+    "test:redirects": "node scripts/test-redirects.mjs",
+    "export:wordpress": "node scripts/export-wordpress.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.2",

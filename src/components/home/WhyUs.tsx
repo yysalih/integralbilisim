@@ -4,7 +4,7 @@ import { useRevealOnce } from "@/hooks/useRevealOnce";
 
 const PILLARS = [
   {
-    title: "2-3 günde yayında",
+    title: "5 günde yayında",
     detail:
       "Hazır web sitesi çözümlerinde siteniz günler içinde açılır. Haftalarca beklemenize gerek kalmaz.",
   },

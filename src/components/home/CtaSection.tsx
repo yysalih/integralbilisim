@@ -39,7 +39,7 @@ export function CtaSection() {
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-white/60">
               İhtiyacınızı anlatın, size en uygun çözümü ve fiyatı birlikte belirleyelim.
-              Hazır web sitesi çözümlerinde siteniz 2-3 gün içinde yayında.
+              Hazır web sitesi çözümlerinde siteniz 5 gün içinde yayında.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
               <Link

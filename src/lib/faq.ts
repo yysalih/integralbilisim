@@ -11,7 +11,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Sitem ne kadar sürede yayına girer?",
     answer:
-      "Hazır web sitesi çözümlerimizde siteniz 2-3 gün içinde yayına alınır. Özel tasarım projelerinde süre, işin kapsamına göre değişir.",
+      "Hazır web sitesi çözümlerimizde siteniz 5 gün içinde yayına alınır. Özel tasarım projelerinde süre, işin kapsamına göre değişir.",
   },
   {
     question: "Alan adı ve hosting pakete dahil mi?",
