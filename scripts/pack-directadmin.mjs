@@ -5,9 +5,13 @@
  *   npm run pack:directadmin
  *   SITE_URL=https://baska-domain.com npm run pack:directadmin
  *
- * Çıktı: dist-directadmin/ klasörü ve yanında .zip
- * İçerik: .output (sunucu + statik dosyalar), app.mjs (başlatma dosyası),
- *         package.json, .htaccess (301 yönlendirmeleri), KURULUM.md
+ * Çıktı: dist-directadmin/ ve integralbilisim-directadmin.zip
+ *   uygulama/               -> Node uygulama dizinine yüklenir
+ *     .output/              sunucu + statik dosyalar
+ *     app.js                başlatma dosyası (Passenger)
+ *     package.json
+ *   htaccess-kurallari.txt  -> public_html/.htaccess dosyasına EKLENİR
+ *   KURULUM.md
  */
 import { execSync } from "node:child_process";
 import { cpSync, mkdirSync, rmSync, writeFileSync, existsSync, readFileSync } from "node:fs";
@@ -30,29 +34,34 @@ if (!existsSync(resolve(ROOT, ".output/server/index.mjs"))) {
 }
 
 rmSync(OUT, { recursive: true, force: true });
-mkdirSync(OUT, { recursive: true });
-cpSync(resolve(ROOT, ".output"), resolve(OUT, ".output"), { recursive: true });
+const APP = resolve(OUT, "uygulama");
+mkdirSync(APP, { recursive: true });
+cpSync(resolve(ROOT, ".output"), resolve(APP, ".output"), { recursive: true });
 
-// CloudLinux Node Selector / Passenger "başlatma dosyası" ister.
+// CloudLinux Node Selector / Passenger "başlatma dosyası" ister. CommonJS
+// tutulur: eski Passenger sürümleri ESM başlatma dosyasını yükleyemez.
+// Sunucu (ESM) dinamik içe aktarımla yüklenir; bu her iki sürümde de çalışır.
 writeFileSync(
-  resolve(OUT, "app.mjs"),
+  resolve(APP, "app.js"),
   `/**
- * Başlatma dosyası. Node sunucusu PORT ortam değişkenini kullanır;
+ * Başlatma dosyası. Sunucu PORT ortam değişkenini kullanır;
  * DirectAdmin / Passenger bu değeri kendisi atar.
  */
-import "./.output/server/index.mjs";
+import("./.output/server/index.mjs").catch((err) => {
+  console.error("Sunucu başlatılamadı:", err);
+  process.exit(1);
+});
 `,
 );
 
 writeFileSync(
-  resolve(OUT, "package.json"),
+  resolve(APP, "package.json"),
   JSON.stringify(
     {
       name: "integralbilisim-web",
       private: true,
-      type: "module",
       engines: { node: ">=20" },
-      scripts: { start: "node app.mjs" },
+      scripts: { start: "node app.js" },
     },
     null,
     2,
@@ -86,10 +95,11 @@ const FAMILY_REDIRECTS = [
 ];
 
 writeFileSync(
-  resolve(OUT, ".htaccess"),
+  resolve(OUT, "htaccess-kurallari.txt"),
   `# İntegral Bilişim — Apache kuralları
-# Bu dosya public_html içine konur. Apache, Node uygulamasına vermeden önce
-# aşağıdaki yönlendirmeleri uygular.
+# Bu satırlar public_html/.htaccess dosyasına EKLENİR, dosyanın yerine konmaz.
+# Node.js Selector'ün yazdığı "CLOUDLINUX PASSENGER CONFIGURATION" bloğuna
+# dokunmayın; bu kuralları o bloğun ÜSTÜNE yapıştırın.
 
 RewriteEngine On
 
@@ -124,69 +134,99 @@ writeFileSync(
   resolve(OUT, "KURULUM.md"),
   `# DirectAdmin kurulumu
 
-Kanonik adres bu pakette **${SITE_URL}** olarak derlendi.
+Bu paket **${SITE_URL}** adresi için derlendi (canonical, sitemap ve paylaşım
+kartları bu adresi gösterir).
 
-## 1. Dosyaları yükleyin
-Bu klasörün içeriğini uygulama dizinine kopyalayın (örn. \`/home/KULLANICI/nodeapps/integral\`).
-\`.htaccess\` dosyası ise \`public_html\` içine konur.
+Paket içeriği:
 
-## 2. Node uygulamasını tanımlayın
-DirectAdmin > **Node.js Selector** (ya da "Setup Node.js App"):
+| Dosya | Nereye |
+|---|---|
+| \`uygulama/\` klasörünün **içeriği** | Node uygulama dizinine (ör. \`/home/KULLANICI/integralbilisim\`) |
+| \`htaccess-kurallari.txt\` | \`public_html/.htaccess\` dosyasına **eklenir** (adım 3) |
+
+## 1. Eski sitenin yedeğini alın
+Taşımadan önce DirectAdmin > **Create/Restore Backups** ile eski WordPress
+sitesinin tam yedeğini alın (veritabanı + dosyalar). İçerik ve görseller ayrıca
+arşivlendi, ama veritabanı ve eklenti ayarları yalnızca bu yedekte bulunur.
+
+## 2. Uygulamayı yükleyip tanımlayın
+1. File Manager'da public_html DIŞINDA bir klasör açın (ör. \`integralbilisim\`)
+   ve \`uygulama/\` klasörünün içindekileri oraya yükleyin. Gizli \`.output\`
+   klasörünün de yüklendiğinden emin olun.
+2. DirectAdmin > **Setup Node.js App** > Create Application:
 
 | Alan | Değer |
 |---|---|
-| Node sürümü | 20 veya üzeri |
-| Application root | uygulamayı kopyaladığınız dizin |
-| Application URL | ${SITE_URL} |
-| Application startup file | \`app.mjs\` |
+| Node.js version | 20 veya üzeri (20 ile test edildi) |
+| Application mode | Production |
+| Application root | 1. adımdaki klasör |
+| Application URL | ${SITE_URL.replace(/^https?:\/\//, "")} |
+| Application startup file | \`app.js\` |
 
-## 3. Ortam değişkenleri
-Aynı ekranda şunları tanımlayın:
+**Run NPM Install** gerekmez; bağımlılıklar pakete gömülüdür.
 
-- \`RESEND_API_KEY\` — iletişim ve teklif formlarının e-posta göndermesi için
-- \`PSI_API_KEY\` — site analizi aracındaki hız ölçümü için
-- \`CONTACT_TO_EMAIL\` — formların düşeceği adres (varsayılan: info@integralbilisim.com)
-- \`SUPABASE_URL\`, \`SUPABASE_ANON_KEY\` — blog içeriğini veritabanından okumak için
-- \`SUPABASE_SERVICE_ROLE_KEY\` — form taleplerini \`leads\` tablosuna yazmak için
-  (bu anahtar yalnızca sunucuda kullanılır, tarayıcıya hiç gönderilmez)
+## 3. .htaccess kurallarını ekleyin
+Uygulamayı oluşturduğunuzda panel \`public_html/.htaccess\` içine şöyle bir blok yazar:
 
-Supabase değişkenleri tanımlanmazsa site çalışmaya devam eder: blog yazıları
-koda gömülü anlık görüntüden okunur, form talepleri yalnızca e-posta ile gider.
-
-\`PORT\` değişkenini siz tanımlamayın; panel kendisi atar.
-
-## 4. Başlatın
-Panelden **Run NPM Install** gerekmez (bağımlılıklar pakete gömülü).
-**Start App** deyin; ardından \`${SITE_URL}\` adresini açın.
-
-## 5. Kontrol listesi
-- [ ] Ana sayfa açılıyor
-- [ ] \`/teklif\` ve \`/araclar/site-analizi\` açılıyor
-- [ ] \`/robots.txt\` ve \`/sitemap.xml\` yanıt veriyor
-- [ ] İletişim formu mail gönderiyor (RESEND_API_KEY)
-- [ ] Site analizi bir siteyi tarayabiliyor (giden HTTP izni gerekir)
-- [ ] Blog yazıları görünüyor (\`/blog\`)
-
-## 6. Supabase'i bağlama (blog + lead yönetimi)
-Supabase panelinde proje açtıktan sonra, geliştirme makinesinde:
-
-\`\`\`bash
-supabase link --project-ref <proje-ref>
-supabase db push                      # tabloları ve erişim kurallarını oluşturur
-SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npm run seed   # yazıları aktarır
+\`\`\`
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+...
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
 \`\`\`
 
-Ardından yukarıdaki üç Supabase değişkenini DirectAdmin'de tanımlayıp uygulamayı
-yeniden başlatın. Blog artık veritabanından okunur; yazı değiştirmek için yeniden
-derleme gerekmez.
+Bu bloğa **dokunmayın**. \`htaccess-kurallari.txt\` içeriğini kopyalayıp bu
+bloğun **üstüne** yapıştırın. Dosyayı komple değiştirirseniz site açılmaz.
+
+Bu kurallar eski sitenin 820 adresinin tamamını yeni sayfalara 301 ile
+yönlendirir. public_html'de eski WordPress dosyaları duruyorsa (index.php,
+wp-* klasörleri) yedek aldıktan sonra kaldırın.
+
+## 4. Ortam değişkenleri
+Aynı ekranda **Environment variables** bölümüne ekleyin:
+
+| Değişken | Ne için |
+|---|---|
+| \`RESEND_API_KEY\` | Form e-postaları |
+| \`CONTACT_FROM_EMAIL\` | Gönderen adresi, ör. \`bildirim@integralbilisim.com\` (aşağıya bakın) |
+| \`CONTACT_TO_EMAIL\` | Formların düşeceği adres (varsayılan: info@integralbilisim.com) |
+| \`PSI_API_KEY\` | Site analizi aracındaki hız ölçümü |
+| \`SUPABASE_URL\` | Blog ve lead veritabanı |
+| \`SUPABASE_ANON_KEY\` | Blog okuma |
+| \`SUPABASE_SERVICE_ROLE_KEY\` | Form taleplerini kaydetme (yalnızca sunucuda kullanılır) |
+
+\`PORT\` tanımlamayın; panel kendisi atar.
+
+**Resend gönderen adresi:** \`CONTACT_FROM_EMAIL\` boş kalırsa \`onboarding@resend.dev\`
+kullanılır. Resend bu test adresinden yalnızca Resend hesabının sahibine e-posta
+gönderir; \`info@integralbilisim.com\` adresine giden mailler reddedilir. Resend
+panelinde **Domains** bölümünden integralbilisim.com'u ekleyip verdiği DNS
+kayıtlarını DirectAdmin > DNS Management'a girin, doğrulandıktan sonra
+\`CONTACT_FROM_EMAIL\` değişkenini bu domain'den bir adresle tanımlayın.
+(Mail gitmese bile talepler Supabase'deki \`leads\` tablosuna kaydedilir.)
+
+## 5. Başlatın ve kontrol edin
+**Start App** deyin, sonra:
+
+- [ ] Ana sayfa, \`/blog\`, \`/teklif\`, \`/araclar/site-analizi\` açılıyor
+- [ ] \`/robots.txt\` ve \`/sitemap.xml\` yanıt veriyor
+- [ ] Eski bir adres yönleniyor: \`/seo-nedir\` -> \`/blog/seo-nedir\`,
+      \`/web-siteler/otel-siteleri\` -> \`/hizmetler/hazir-web-site\`
+- [ ] \`http://\` ve \`www.\` adresleri \`${SITE_URL}\` adresine yönleniyor
+- [ ] İletişim formu e-posta gönderiyor
+- [ ] Site analizi bir siteyi tarayabiliyor (giden HTTP izni gerekir)
+
+Uygulama açılmazsa Setup Node.js App ekranındaki log dosyasına bakın.
 
 ## Dikkat
 - Site analizi aracı dış sitelere istek atar ve PageSpeed ölçümü 20-40 saniye
-  sürebilir. Paylaşımlı pakette giden bağlantı veya istek süresi sınırlıysa bu
-  araç çalışmaz; diğer sayfalar etkilenmez.
-- Ziyaretçi ölçümü için GA4 gerekir (\`VITE_GA4_ID\` derleme anında tanımlanmalı).
+  sürebilir. Paylaşımlı pakette giden bağlantı ya da istek süresi sınırlıysa
+  yalnızca bu araç çalışmaz; diğer sayfalar etkilenmez.
+- Yayından sonra Search Console'a \`${SITE_URL}/sitemap.xml\` adresini gönderin.
 `,
 );
 
-execSync(`cd "${ROOT}" && zip -qry dist-directadmin.zip dist-directadmin`, { stdio: "inherit" });
-console.log(`\nPaket hazır: dist-directadmin/ ve dist-directadmin.zip`);
+execSync(
+  `cd "${ROOT}" && rm -f integralbilisim-directadmin.zip && cd dist-directadmin && zip -qry ../integralbilisim-directadmin.zip .`,
+  { stdio: "inherit" },
+);
+console.log(`\nPaket hazır: integralbilisim-directadmin.zip`);

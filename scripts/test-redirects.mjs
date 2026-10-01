@@ -4,7 +4,7 @@
  *
  * Kullanım:
  *   1) npm run pack:directadmin
- *   2) cd dist-directadmin && PORT=3555 node app.mjs
+ *   2) cd dist-directadmin/uygulama && PORT=3555 node app.js
  *   3) node scripts/test-redirects.mjs [http://127.0.0.1:3555]
  *
  * Eski adres listesi: scripts/data/eski-site-adresleri.txt (eski site
@@ -20,7 +20,7 @@ const oldPaths = readFileSync(resolve(ROOT, "scripts/data/eski-site-adresleri.tx
   .split("\n").filter(Boolean)
   .map((u) => decodeURIComponent(new URL(u).pathname).replace(/^\/|\/$/g, ""));
 
-const rules = readFileSync(resolve(ROOT, "dist-directadmin/.htaccess"), "utf8")
+const rules = readFileSync(resolve(ROOT, "dist-directadmin/htaccess-kurallari.txt"), "utf8")
   .split("\n")
   .map((l) => l.trim().match(/^RewriteRule\s+(\S+)\s+(\S+)\s+\[R=301,L\]$/))
   .filter((m) => m && m[1] !== "^")

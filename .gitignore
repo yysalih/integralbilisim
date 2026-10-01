@@ -13,6 +13,7 @@ src/routeTree.gen.ts
 # derleme ve dağıtım çıktıları
 dist-directadmin
 dist-directadmin.zip
+integralbilisim-directadmin.zip
 # Supabase CLI yerel durumu
 supabase/.temp
 supabase/.branches
