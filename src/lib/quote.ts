@@ -412,3 +412,19 @@ export const summaryLines = (a: QuoteAnswers): string[] => {
   if (budget) lines.push(`Bütçe: ${budget.label}`);
   return lines;
 };
+
+/**
+ * Bir hizmetin tahmini başlangıç aralığı: en dar kapsam, içerik ve alan adı
+ * hazır, zaman esnek. Hizmet sayfalarındaki "başlayan fiyatlarla" bilgisi
+ * buradan hesaplanır; fiyat listesi değişince sayfalar da kendiliğinden güncellenir.
+ */
+export const startingEstimate = (slug: string) => {
+  const cheapest = (opts: QuoteOption[]) =>
+    opts.reduce((a, b) => (b.factor < a.factor ? b : a)).value;
+  const a = emptyAnswers();
+  a.services = [slug];
+  for (const q of SERVICE_QUESTIONS[slug] ?? []) a.scope[`${slug}.${q.id}`] = [cheapest(q.options)];
+  for (const q of SITUATION_QUESTIONS) a.situation[q.id] = cheapest(q.options);
+  a.urgency = "esnek";
+  return estimate(a);
+};

@@ -3,6 +3,10 @@
  *
  * Kullanım:
  *   SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npm run seed
+ *
+ * UNPUBLISH_MISSING=1 ile, koddaki listede artık bulunmayan yazılar silinmez,
+ * yayından kaldırılır (is_published = false). Geri alınabilir; kalıcı silme
+ * panelden bilinçli olarak yapılır.
  */
 import { createClient } from "@supabase/supabase-js";
 
@@ -54,5 +58,24 @@ if (error) {
   process.exit(1);
 }
 
+if (process.env.UNPUBLISH_MISSING === "1") {
+  const keep = rows.map((r) => r.slug);
+  const { data: stale, error: e2 } = await db
+    .from("posts")
+    .update({ is_published: false })
+    .eq("is_published", true)
+    .not("slug", "in", `(${keep.map((k) => `"${k}"`).join(",")})`)
+    .select("slug");
+  if (e2) {
+    console.error("Yayından kaldırma hatası:", e2.message);
+    process.exit(1);
+  }
+  console.log(`yayindan kaldirilan: ${stale?.length ?? 0}`);
+}
+
 const { count } = await db.from("posts").select("*", { count: "exact", head: true });
-console.log(`aktarilan: ${rows.length} | tablodaki toplam: ${count}`);
+const { count: live } = await db
+  .from("posts")
+  .select("*", { count: "exact", head: true })
+  .eq("is_published", true);
+console.log(`aktarilan: ${rows.length} | tablodaki toplam: ${count} | yayinda: ${live}`);

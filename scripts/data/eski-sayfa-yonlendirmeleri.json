@@ -1,0 +1,258 @@
+[
+ {
+  "from": "4575-2",
+  "to": "/"
+ },
+ {
+  "from": "web-siteler/yol-yardim-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "kullanim-sartlari",
+  "to": "/gizlilik-politikasi"
+ },
+ {
+  "from": "kvkk-aydinlatma-metni",
+  "to": "/gizlilik-politikasi"
+ },
+ {
+  "from": "kariyer",
+  "to": "/hakkimizda"
+ },
+ {
+  "from": "web-siteler/yedek-parcaci-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/yangin-sondurme-firmasi-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/tur-ve-gezi-rehber-paketi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/temizlik-firmasi-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/teknik-servis-web-tasarim",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/taki-ve-mucevherat-hazir-web-sitesi-temasi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/spor-salonu-fitness-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/sevgililer-gunu-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/saat-e-ticaret-web-sitesi",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
+ },
+ {
+  "from": "web-siteler/rent-a-car-hazir-web-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/pvc-zemin-ve-pvc-pencere-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/pastane-unlu-mamuller-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/parti-aday-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/otel-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/nakliyat-lojistik-web-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/muhendislik-makine-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/mobilya-hazir-web-sitesi-temasi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/mimarlik-web-tasarim",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/mekan-firma-rehberi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/kurumsal-firma-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/kuafor-ve-guzellik-salonu-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/kres-anaokulu-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/kamera-alarm-sistemleri-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/is-makinasi-hafriyat",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/insaat-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/guzellik-salonu-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/hastane-saglik-hazir-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/giyim-ve-canta-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/gida-hazir-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/fotografcilik-kisisel-blog-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/firma-rehberi-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/finans-mali-musavir-muhasebeci-web-tasarim",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/esya-zuccaciye-e-ticaret-web-sitesi",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
+ },
+ {
+  "from": "web-siteler/emlak-web-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/elektrik-elektronik-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/egitim-okul-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/e-ticaret-siteleri",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
+ },
+ {
+  "from": "web-siteler/dugun-salonu-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/danismanlik-hazir-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/cicekci-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/cast-ajansi-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/cafe-ve-restaurant-hazir-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/bocek-ilaclama-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/belediye-dernek-tanitim-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/avukat-web-sitesi-hukuk-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/asansor-firmasi-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-siteler/ajans-web-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hizmetler/google-adwors-reklami",
+  "to": "/hizmetler/google-ads-reklami"
+ },
+ {
+  "from": "misyonumuz-vizyonumuz",
+  "to": "/hakkimizda"
+ },
+ {
+  "from": "web-siteler",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "belgelerimiz",
+  "to": "/hakkimizda"
+ },
+ {
+  "from": "videolar",
+  "to": "/hakkimizda"
+ },
+ {
+  "from": "degerlerimiz",
+  "to": "/hakkimizda"
+ },
+ {
+  "from": "tarim-ziraat-web-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hazir-web-site",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-sitesi",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "admin-paneli-\\(yonetim-paneli\\)-nedir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "en-i̇yi-web-tasarim-firmalari",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "en-i̇yi-hazir-web-site",
+  "to": "/hizmetler/hazir-web-site"
+ }
+]

@@ -4,48 +4,168 @@
   "to": "/blog/e-ticaret-sitesi-nedir-2"
  },
  {
-  "from": "web-tasarim-fiyatlari-neleri-kapsar",
-  "to": "/blog/web-tasarim-fiyatlari-neleri-kapsar-2"
- },
- {
   "from": "web-sitelerinde-kullanilabilirlik",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "web-sitesi-sahibi-olmanin-avantajlari",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "firmalarda-web-sitesinin-onemi-nedir",
+  "to": "/blog/firmalarda-web-sitesinin-onemi"
  },
  {
   "from": "admin-paneli-nedir",
   "to": "/blog"
  },
  {
-  "from": "seo-hizmeti",
+  "from": "kucuk-i̇sletmeler-icin-ekonomik-web-tasarim-cozumleri",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "2025te-web-tasarim-trendleri",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "hazir-tasarimlar-ile-freelancer-web-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "e-ticaret-sitesi-acarken-nelere-dikkat-edilmeli",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
+ },
+ {
+  "from": "i̇cerik-yonetim-sistemleri-cms-ile-web-sitesi-kurmak",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "kurumsal-kimlik-ile-web-sitesi-uyumunun-onemi",
+  "to": "/hizmetler/kurumsal-kimlik"
+ },
+ {
+  "from": "web-tasarimda-etkilesimli-ogeler-kullanimi",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "hizli-yuklenen-web-sitesi-neden-gerekli",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "2025-te-web-tasarim-trendleri-ve-hazir-sistemler",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hazir-web-tasarimin-egitim-kurumlarina-faydalari",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "blog-siteleri-icin-hazir-web-tasarim-onerileri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hazir-web-tasarimin-yeni-girisimcilere-katkisi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-tasariminda-sayfa-hizi-optimizasyonunun-onemi",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "kurumsal-web-sitelerinde-hazir-tasarim-avantajlari",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "mobil-uyumluluk-neden-web-tasarimda-vazgecilmezdir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "e-ticaret-sitelerinde-hazir-tasarim-secimi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "dijital-varlik-icin-hazir-web-tasarimin-rolu",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hazir-web-sitelerinde-i̇cerik-yapisinin-onemi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "hazir-sitelerle-hedef-kitlenize-daha-hizli-ulasin",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-tasarimda-gorsel-hiyerarsi-nasil-kurulur",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-tasariminda-renk-seciminin-kullanici-etkisi",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-tasarim-surecinde-seo-baslangic-stratejileri",
+  "to": "/blog/seo-nedir"
+ },
+ {
+  "from": "seo-uyumlu-web-tasarimin-dijital-pazarlamaya-etkisi",
+  "to": "/blog/seo-nedir"
+ },
+ {
+  "from": "hazir-web-tasarim-ile-hizli-dijitallesme",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-tasarim-hizmeti",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "marka-ve-patent-tescili",
+  "to": "/hizmetler/marka-tescil"
+ },
+ {
+  "from": "google-adwors-hizmeti",
   "to": "/blog"
+ },
+ {
+  "from": "web-tasarim-hazir-web-sitesi-iller",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "seo-hizmeti",
+  "to": "/blog/seo-nedir"
  },
  {
   "from": "logo-tasarimi",
-  "to": "/blog"
+  "to": "/hizmetler/logo-calismasi"
+ },
+ {
+  "from": "sosyal-medya-hizmeti-iller",
+  "to": "/hizmetler/sosyal-medya-yonetimi"
  },
  {
   "from": "sirketlere-web-sitesi-zorunlulugu",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "responsive-web-tasarim-nedir",
+  "to": "/blog/responsive-tasarim-nedir"
  },
  {
   "from": "web-sitelerinde-tarayici-uyumlulugu",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "web-sitesi-hedef-kitle-beklentisi",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "site-haritasi-nedir",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "web-sitelerinde-sayfa-cozunurlugunun-onemi",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "admin-paneli-nasil-olmalidir",
@@ -56,16 +176,20 @@
   "to": "/blog/kimler-web-sitesi-yaptirmali"
  },
  {
-  "from": "hosting-nedir-2",
-  "to": "/blog/hosting-nedir"
+  "from": "web-tasarim-fiyatlari-neleri-kapsar-2",
+  "to": "/blog/web-tasarim-fiyatlari-neleri-kapsar"
  },
  {
   "from": "domain-nedir-2",
   "to": "/blog/domain-nedir"
  },
  {
+  "from": "hosting-nedir-2",
+  "to": "/blog/hosting-nedir"
+ },
+ {
   "from": "tesla-d-ile-dunyanin-en-hizli-araclari-arasina-giren-sirketin-yeni-rotasi-surucusuz-otomobiller",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "nasa-amerikanin-ilk-yerli-uzay-taksilerini-gelistirme-gorevini-boeing-ve-spacexe-verdi",
@@ -76,10 +200,6 @@
   "to": "/blog"
  },
  {
-  "from": "turkiyede-internet-sitelerinin-tarihi-2",
-  "to": "/blog/turkiyede-internet-sitelerinin-tarihi"
- },
- {
   "from": "google-600-milyon-euroluk-yatirimla-hollandada-data-center-kuracak",
   "to": "/blog"
  },
@@ -88,8 +208,12 @@
   "to": "/blog/hazir-web-sitesi-nasil-olmalidir-3"
  },
  {
+  "from": "turkiyede-internet-sitelerinin-tarihi-2",
+  "to": "/blog/turkiyede-internet-sitelerinin-tarihi"
+ },
+ {
   "from": "hazir-web-sitesi-mi-ozel-tasarim-mi",
-  "to": "/blog"
+  "to": "/hizmetler/hazir-web-site"
  },
  {
   "from": "e-ticaret-sitesi-nedir",
@@ -97,30 +221,146 @@
  },
  {
   "from": "ozel-tasarim",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "hazir-site",
+  "to": "/hizmetler/hazir-web-site"
  },
  {
   "from": "site-haritasi-nedir-",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-sitesi-tasarimi",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "hazir-site-nedir",
+  "to": "/hizmetler/hazir-web-site"
  },
  {
   "from": "modern-yazilim",
   "to": "/blog"
  },
  {
+  "from": "patent-tescili",
+  "to": "/hizmetler/marka-tescil"
+ },
+ {
+  "from": "hazir-web-sitesi-detaylar",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "web-site-tasarimi-avantajlari",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "mobil-uyumlu-web-tasarim-nedir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "hazir-web-sitesi-avantajlari",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "firma-hazir-web-siteleri",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
   "from": "mobil-uyumlu-web-tasarimi-nedir",
-  "to": "/blog/mobil-uyumlu-web-tasarim-nedir"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "sizin-de-bir-web-siteniz-olsun",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "logo-nedir-logo-tasarimi-nasil-yapilir",
+  "to": "/hizmetler/logo-calismasi"
+ },
+ {
+  "from": "mobil-uyumlu-web-tasarimi-yaparken-nelere-dikkat-edilir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "responsive-web-tasarim-nedir",
+  "to": "/blog/responsive-tasarim-nedir"
+ },
+ {
+  "from": "hazir-rent-a-car-sitesi",
+  "to": "/hizmetler/hazir-web-site"
+ },
+ {
+  "from": "e-ticaret-mobilya-web-siteleri",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
  },
  {
   "from": "profesyonel-web-sitesi-nasil-olmali",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "saat-e-ticaret-sitesi",
+  "to": "/hizmetler/e-ticaret-web-siteleri"
+ },
+ {
+  "from": "mobil-uyumlu-web-tasarimi-nereden-alinir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "mobil-uyumlu-web-tasarimi-nasil-yapilir",
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "sirketlere-websitesi-zorunlulugu",
-  "to": "/blog"
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "mobil-uyumlu-web-site-firmasi-secerken-nelere-dikkat-edilir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-sitesi-nasil-acilir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-tasarim-firmalari",
+  "to": "/hizmetler/web-tasarim"
  },
  {
   "from": "memnuniyet-garantisi",
   "to": "/blog"
+ },
+ {
+  "from": "web-tasarim-yaptirmanin-avantajlari",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-sitesi-fiyatlari",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "web-tasarim-fiyatlari",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "marka-tescili-nedir",
+  "to": "/hizmetler/marka-tescil"
+ },
+ {
+  "from": "mobil-uyumlu-web-site-veren-kuruluslar-kimlerdir",
+  "to": "/hizmetler/web-tasarim"
+ },
+ {
+  "from": "logo-tasarimi-yaptirmak",
+  "to": "/hizmetler/logo-calismasi"
+ },
+ {
+  "from": "exynos-7420nin-ilk-test-sonuclari",
+  "to": "/blog"
+ },
+ {
+  "from": "iwork-paketinin-web-surumu-ucretsiz",
+  "to": "/hizmetler/web-tasarim"
  }
 ]

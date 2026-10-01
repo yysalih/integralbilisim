@@ -5,7 +5,9 @@ import { ArrowRight, Check } from "lucide-react";
 import { CtaSection } from "@/components/home/CtaSection";
 import { whatsappLink } from "@/lib/company";
 import { CATEGORY_LABELS, SERVICES, getService } from "@/lib/services";
-import { breadcrumbSchema, jsonLd, pageHead, serviceSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, jsonLd, pageHead, serviceSchema } from "@/lib/seo";
+import { SERVICE_CONTENT, processFor } from "@/lib/service-content";
+import { ServiceBody } from "@/components/service/ServiceBody";
 
 export const Route = createFileRoute("/hizmetler/$slug")({
   loader: ({ params }) => {
@@ -16,6 +18,7 @@ export const Route = createFileRoute("/hizmetler/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return {};
     const { service } = loaderData;
+    const content = SERVICE_CONTENT[service.slug];
     return {
       ...pageHead({
         title: `${service.title} | İntegral Bilişim`,
@@ -32,6 +35,9 @@ export const Route = createFileRoute("/hizmetler/$slug")({
             { name: service.title, path: `/hizmetler/${service.slug}` },
           ]),
         ),
+        ...(content
+          ? [jsonLd(faqSchema(content.faqs.map((f) => ({ question: f.q, answer: f.a }))))]
+          : []),
       ],
     };
   },
@@ -41,6 +47,9 @@ export const Route = createFileRoute("/hizmetler/$slug")({
 function ServiceDetailPage() {
   const { service } = Route.useLoaderData();
   const accent = service.accent;
+  const content = SERVICE_CONTENT[service.slug];
+  // Derin içerik varsa giriş oradan gelir; yoksa kısa açıklamaya düşülür.
+  const introParagraphs = content?.intro ?? service.long;
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 6);
 
   return (
@@ -119,7 +128,7 @@ function ServiceDetailPage() {
                 Bu hizmette neyi, nasıl yapıyoruz?
               </h2>
               <div className="mt-6 space-y-5 leading-relaxed text-muted-foreground">
-                {service.long.map((p, i) => (
+                {introParagraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
@@ -154,6 +163,16 @@ function ServiceDetailPage() {
           </div>
         </div>
       </section>
+
+      {content && (
+        <ServiceBody
+          slug={service.slug}
+          title={service.title}
+          accent={accent}
+          content={content}
+          process={processFor(service.slug)}
+        />
+      )}
 
       {/* Diğer hizmetler */}
       <section className="bg-[#0a0a12] py-16 md:py-20">

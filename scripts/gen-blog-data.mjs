@@ -1,6 +1,9 @@
 /**
  * Kazınan yazılardan src/lib/blog.ts üretir.
- * Kullanım: POSTS=/yol/posts.json node scripts/gen-blog-data.mjs
+ * Kullanım: node scripts/gen-blog-data.mjs
+ * Kaynak: scripts/data/eski-site-yazilari.json — eski WordPress sitesinden
+ * kazınan ham yazılar (scripts/migrate-blog.mjs). Eski site kapandığında yeniden
+ * kazınamayacağı için repoda saklanır.
  *
  * Eleme kuralları: 150 kelimeden kısa yazılar, aynı başlığın tekrarları ve
  * ajans konusuyla ilgisiz eski teknoloji haberleri dışarıda bırakılır.
@@ -9,10 +12,64 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dirname, "..");
-const posts = JSON.parse(readFileSync(process.env.POSTS, "utf8"));
+const SOURCE = process.env.POSTS ?? resolve(ROOT, "scripts/data/eski-site-yazilari.json");
+const posts = JSON.parse(readFileSync(SOURCE, "utf8"));
 
 const norm = (t) => t.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "");
-const OFF_TOPIC = ["tesla-d", "data-center", "windows-9"];
+
+/**
+ * Şablon paragraf imzaları: eski sitede aynı dört paragraflık iskelete yalnızca
+ * başlık yapıştırılarak üretilmiş yazılar. Bu paragraflar ayıklanır; geriye
+ * 150 kelimeden az gerçek içerik kalan yazılar taşınmaz.
+ */
+const SPIN = [
+  "dijital dünyada öne çıkmak isteyen firmaların sıklıkla",
+  "iyi tasarlanmış bir web sitesi, hem kullanıcı deneyimini artırır",
+  "birçok işletme için dijital varlık oluşturmak zorlu bir süreç",
+  "konusunda bilinçli adımlar atmak",
+  "modern işletmelerin dijital varlık stratejilerinde",
+  "iyi planlanmış bir site, ziyaretçinin dikkatini çekerken",
+  "web sitesi sadece bir tanıtım aracı değil, aynı zamanda satış",
+  "hedefleyen firmalar için sağlam temellerle kurulan",
+  "işletmelerin online varlıklarını hızlı ve etkili bir şekilde kurmaları",
+  "çözümleri sayesinde, kullanıcılar kısa sürede seo uyumlu",
+  "hazır web tasarımın sunduğu düşük maliyetli çözümler",
+  "dijitalde rekabet avantajı elde etmek isteyen herkes için",
+];
+const isSpin = (t) => SPIN.some((sig) => t.toLocaleLowerCase("tr").includes(sig));
+
+/** 81 ilin adının alt alta dizildiği kapı sayfası dizinleri. */
+const isCityHub = (p) => p.body.filter((b) => b.text.split(/\s+/).length <= 8).length >= 20;
+
+/** Başlığı farklı ama metni aynı yazıların korunan ikizi. */
+const CONTENT_TWIN = {};
+const tokens = (p) =>
+  new Set(p.body.map((b) => b.text).join(" ").toLocaleLowerCase("tr").split(/[^\p{L}0-9]+/u).filter((w) => w.length > 3));
+const similar = (a, b) => {
+  const x = tokens(a), y = tokens(b);
+  let i = 0;
+  for (const t of x) if (y.has(t)) i++;
+  return i / (x.size + y.size - i || 1);
+};
+
+/** Aynı konuyu ele alan iki yazıdan zayıf olanı güçlüsüne birleştirilir. */
+const MERGE = { "responsive-web-tasarim-nedir": "responsive-tasarim-nedir" };
+
+/** Taşınmayan yazının en yakın konusu: hizmet sayfası ya da korunan yazı. */
+const topicTarget = (title) => {
+  const t = title.toLocaleLowerCase("tr");
+  if (/hazır|hazir/.test(t)) return "/hizmetler/hazir-web-site";
+  if (/e-?ticaret/.test(t)) return "/hizmetler/e-ticaret-web-siteleri";
+  if (/kurumsal kimlik/.test(t)) return "/hizmetler/kurumsal-kimlik";
+  if (/logo/.test(t)) return "/hizmetler/logo-calismasi";
+  if (/marka|patent|tescil/.test(t)) return "/hizmetler/marka-tescil";
+  if (/sosyal medya/.test(t)) return "/hizmetler/sosyal-medya-yonetimi";
+  if (/reklam|adwords|google ads/.test(t)) return "/hizmetler/google-ads-reklami";
+  if (/seo/.test(t)) return "/blog/seo-nedir";
+  if (/web|site|tasarım|mobil/.test(t)) return "/hizmetler/web-tasarim";
+  return "/blog";
+};
+const OFF_TOPIC = ["tesla-d", "data-center", "windows-9", "iwork"];
 
 /**
  * Aynı başlığın kopyaları arasında seçim: önce daha dolu metin, sonra "-2" gibi
@@ -38,8 +95,19 @@ for (const p of posts) {
 }
 for (const [k, p] of byTitle) p.date = newestDate.get(k) ?? p.date;
 
+for (const p of byTitle.values()) {
+  p.body = p.body.filter((b) => !isSpin(b.text) && !/^Diğer Yazılar$/i.test(b.heading ?? ""));
+  p.words = p.body.reduce((n, b) => n + b.text.split(/\s+/).length, 0);
+}
 const kept = [...byTitle.values()]
   .filter((p) => p.words >= 150 && !OFF_TOPIC.some((o) => p.slug.includes(o)))
+  .filter((p) => !isCityHub(p) && !MERGE[p.slug])
+  .filter((p, _i, all) => {
+    // Başlığı farklı, metni neredeyse aynı yazılar: daha iyisi kalır, diğeri ona yönlenir.
+    const twin = all.find((o) => o !== p && similar(o, p) >= 0.8 && better(o, p));
+    if (twin) CONTENT_TWIN[p.slug] = twin.slug;
+    return !twin;
+  })
   .sort((a, b) => b.date.localeCompare(a.date));
 
 /** Başlıktan konu ve renk. Site genelindeki accent paletiyle uyumlu. */
@@ -151,10 +219,19 @@ for (const e of entries) {
 for (const p of posts) {
   if (keptSlugs.has(p.slug)) continue;
   const twin = byTitle.get(norm(p.title));
-  redirects.push({ from: p.slug, to: twin && keptSlugs.has(twin.slug) ? `/blog/${twin.slug}` : "/blog" });
+  const to = CONTENT_TWIN[p.slug] && keptSlugs.has(CONTENT_TWIN[p.slug])
+    ? `/blog/${CONTENT_TWIN[p.slug]}`
+    : MERGE[p.slug] && keptSlugs.has(MERGE[p.slug])
+    ? `/blog/${MERGE[p.slug]}`
+    : twin && keptSlugs.has(twin.slug)
+      ? `/blog/${twin.slug}`
+      : topicTarget(p.title);
+  redirects.push({ from: p.slug, to });
 }
 writeFileSync(resolve(ROOT, "scripts/blog-redirects.json"), JSON.stringify(redirects, null, 1) + "\n");
-console.log(`yonlendirme: ${redirects.length} eski adres (${redirects.filter((r) => r.to !== "/blog").length} kopya -> asil yazi)`);
+const toPosts = redirects.filter((r) => r.to.startsWith("/blog/")).length;
+const toServices = redirects.filter((r) => r.to.startsWith("/hizmetler/")).length;
+console.log(`yonlendirme: ${redirects.length} eski adres -> ${toPosts} korunan yaziya, ${toServices} hizmet sayfasina, ${redirects.length - toPosts - toServices} blog listesine`);
 const kb = (file.length / 1024).toFixed(0);
 console.log(`src/lib/blog.ts yazildi: ${entries.length} yazi, ${kb} KB`);
 const cats = entries.reduce((m, e) => ((m[e.category] = (m[e.category] ?? 0) + 1), m), {});

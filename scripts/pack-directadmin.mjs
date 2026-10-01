@@ -68,6 +68,9 @@ const movedSlugs = [...readFileSync(resolve(ROOT, "src/lib/blog.ts"), "utf8").ma
 const BLOG_MOVED = movedSlugs.map((s) => `RewriteRule ^${s}/?$ /blog/${s} [R=301,L]`).join("\n");
 const dropped = JSON.parse(readFileSync(resolve(ROOT, "scripts/blog-redirects.json"), "utf8"));
 const BLOG_DROPPED = dropped.map((r) => `RewriteRule ^${r.from}/?$ ${r.to} [R=301,L]`).join("\n");
+/** Eski sitenin sayfaları (hizmetler, sektör temaları, kurumsal sayfalar). */
+const oldPages = JSON.parse(readFileSync(resolve(ROOT, "scripts/data/eski-sayfa-yonlendirmeleri.json"), "utf8"));
+const OLD_PAGES = oldPages.map((r) => `RewriteRule ^${r.from}/?$ ${r.to} [R=301,L]`).join("\n");
 
 const FAMILY_REDIRECTS = [
   ["(.+)-logo-tasarimi", "/hizmetler/logo-calismasi"],
@@ -102,6 +105,9 @@ ${BLOG_MOVED}
 
 # --- Taşınmayan eski yazılar (kopya ya da çok kısa) ---
 ${BLOG_DROPPED}
+
+# --- Eski sitenin sayfaları (hizmetler, sektör temaları, kurumsal) ---
+${OLD_PAGES}
 
 # --- Eski sitedeki şehir şablonu yazıları (620 adres) ---
 # Kesin eşleşen blog adresleri yukarıda çözüldüğü için kalıplar onları gölgelemez.

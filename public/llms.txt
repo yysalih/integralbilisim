@@ -38,87 +38,32 @@
 - [İletişim](https://integralbilisim.com/iletisim)
 
 ## Blog yazıları
-- [Sosyal Medya Yönetimi Nedir?](https://integralbilisim.com/blog/sosyal-medya-yonetimi-nedir) — 2025-07-30
 - [SEO Nedir?](https://integralbilisim.com/blog/seo-nedir) — 2025-07-30
+- [Sosyal Medya Yönetimi Nedir?](https://integralbilisim.com/blog/sosyal-medya-yonetimi-nedir) — 2025-07-30
 - [Seo Uyumlu Web Sitesi Nedir?](https://integralbilisim.com/blog/seo-uyumlu-web-sitesi-nedir) — 2025-07-07
 - [Web Sitesi Kurmak](https://integralbilisim.com/blog/web-sitesi-kurmak) — 2025-07-02
 - [Hazır Web Tasarım ile Marka Kimliği Oluşturmanın 7 Önemli Faydası](https://integralbilisim.com/blog/hazir-web-tasarim-ile-marka-kimligi-olusturma) — 2025-06-24
-- [Neden Bir Web Sitem Olsun?](https://integralbilisim.com/blog/neden-bir-web-sitem-olsun) — 2025-06-19
-- [.com ve .com.tr Arasındaki Fark Nedir?](https://integralbilisim.com/blog/com-ve-com-tr-arasindaki-fark-nedir) — 2025-06-19
 - [Web Tasarımın Temel İlkeleri](https://integralbilisim.com/blog/web-tasarimin-temel-ilkeleri) — 2025-06-19
 - [Web Sitesinin Reklam Avantajları](https://integralbilisim.com/blog/web-sitesinin-reklam-avantajlari) — 2025-06-19
 - [Web Sitenizin Ziyaretçi Sayısını Arttırmak İçin Yapılması Gerekenler?](https://integralbilisim.com/blog/web-sitenizin-ziyaretci-sayisini-arttirmak-icin-yapilmasi-gerekenler) — 2025-06-19
-- [Küçük İşletmeler için Ekonomik Web Tasarım Çözümleri](https://integralbilisim.com/blog/kucuk-i̇sletmeler-icin-ekonomik-web-tasarim-cozumleri) — 2025-06-19
+- [Neden Bir Web Sitem Olsun?](https://integralbilisim.com/blog/neden-bir-web-sitem-olsun) — 2025-06-19
+- [.com ve .com.tr Arasındaki Fark Nedir?](https://integralbilisim.com/blog/com-ve-com-tr-arasindaki-fark-nedir) — 2025-06-19
 - [Web Sitelerinin Kurumsal Firmalara Faydaları](https://integralbilisim.com/blog/web-sitelerinin-kurumsal-firmalara-faydalari) — 2025-06-19
-- [Firmalarda Web Sitesinin Önemi Nedir](https://integralbilisim.com/blog/firmalarda-web-sitesinin-onemi-nedir) — 2025-06-19
-- [E-Ticaret Sitesi Nedir?](https://integralbilisim.com/blog/e-ticaret-sitesi-nedir-2) — 2025-06-19
 - [Firmalarda Web Sitesinin Önemi](https://integralbilisim.com/blog/firmalarda-web-sitesinin-onemi) — 2025-06-19
-- [2025'te Web Tasarım Trendleri](https://integralbilisim.com/blog/2025te-web-tasarim-trendleri) — 2025-06-19
-- [Kurumsal Kimlik ile Web Sitesi Uyumunun Önemi](https://integralbilisim.com/blog/kurumsal-kimlik-ile-web-sitesi-uyumunun-onemi) — 2025-06-19
-- [İçerik Yönetim Sistemleri (CMS) ile Web Sitesi Kurmak](https://integralbilisim.com/blog/i̇cerik-yonetim-sistemleri-cms-ile-web-sitesi-kurmak) — 2025-06-19
-- [Hazır Tasarımlar ile Freelancer Web Siteleri](https://integralbilisim.com/blog/hazir-tasarimlar-ile-freelancer-web-siteleri) — 2025-06-19
-- [Web Tasarımda Etkileşimli Öğeler Kullanımı](https://integralbilisim.com/blog/web-tasarimda-etkilesimli-ogeler-kullanimi) — 2025-06-19
-- [E-Ticaret Sitesi Açarken Nelere Dikkat Edilmeli?](https://integralbilisim.com/blog/e-ticaret-sitesi-acarken-nelere-dikkat-edilmeli) — 2025-06-19
-- [Hızlı Yüklenen Web Sitesi Neden Gerekli?](https://integralbilisim.com/blog/hizli-yuklenen-web-sitesi-neden-gerekli) — 2025-06-19
+- [E-Ticaret Sitesi Nedir?](https://integralbilisim.com/blog/e-ticaret-sitesi-nedir-2) — 2025-06-19
 - [Hazır Web Sitesi Oluşturmak](https://integralbilisim.com/blog/hazir-web-sitesi-olusturmak) — 2025-05-29
-- [Hazır Web Tasarımın Eğitim Kurumlarına Faydaları](https://integralbilisim.com/blog/hazir-web-tasarimin-egitim-kurumlarina-faydalari) — 2025-05-29
-- [Blog Siteleri için Hazır Web Tasarım Önerileri](https://integralbilisim.com/blog/blog-siteleri-icin-hazir-web-tasarim-onerileri) — 2025-05-29
-- [Hazır Web Tasarımın Yeni Girişimcilere Katkısı](https://integralbilisim.com/blog/hazir-web-tasarimin-yeni-girisimcilere-katkisi) — 2025-05-29
-- [2025'te Web Tasarım Trendleri ve Hazır Sistemler](https://integralbilisim.com/blog/2025-te-web-tasarim-trendleri-ve-hazir-sistemler) — 2025-05-29
-- [Mobil Uyumluluk Neden Web Tasarımda Vazgeçilmezdir?](https://integralbilisim.com/blog/mobil-uyumluluk-neden-web-tasarimda-vazgecilmezdir) — 2025-05-29
-- [Web Tasarımında Sayfa Hızı Optimizasyonunun Önemi](https://integralbilisim.com/blog/web-tasariminda-sayfa-hizi-optimizasyonunun-onemi) — 2025-05-29
-- [E-Ticaret Sitelerinde Hazır Tasarım Seçimi](https://integralbilisim.com/blog/e-ticaret-sitelerinde-hazir-tasarim-secimi) — 2025-05-29
-- [Kurumsal Web Sitelerinde Hazır Tasarım Avantajları](https://integralbilisim.com/blog/kurumsal-web-sitelerinde-hazir-tasarim-avantajlari) — 2025-05-29
-- [Dijital Varlık için Hazır Web Tasarımın Rolü](https://integralbilisim.com/blog/dijital-varlik-icin-hazir-web-tasarimin-rolu) — 2025-05-29
-- [Hazır Web Sitelerinde İçerik Yapısının Önemi](https://integralbilisim.com/blog/hazir-web-sitelerinde-i̇cerik-yapisinin-onemi) — 2025-05-29
-- [Web Tasarımda Görsel Hiyerarşi Nasıl Kurulur?](https://integralbilisim.com/blog/web-tasarimda-gorsel-hiyerarsi-nasil-kurulur) — 2025-05-29
-- [Hazır Sitelerle Hedef Kitlenize Daha Hızlı Ulaşın](https://integralbilisim.com/blog/hazir-sitelerle-hedef-kitlenize-daha-hizli-ulasin) — 2025-05-29
-- [SEO Uyumlu Web Tasarımın Dijital Pazarlamaya Etkisi](https://integralbilisim.com/blog/seo-uyumlu-web-tasarimin-dijital-pazarlamaya-etkisi) — 2025-05-29
-- [Web Tasarımında Renk Seçiminin Kullanıcı Etkisi](https://integralbilisim.com/blog/web-tasariminda-renk-seciminin-kullanici-etkisi) — 2025-05-29
-- [Web Tasarım Sürecinde SEO Başlangıç Stratejileri](https://integralbilisim.com/blog/web-tasarim-surecinde-seo-baslangic-stratejileri) — 2025-05-29
-- [Hazır Web Tasarım ile Hızlı Dijitalleşme](https://integralbilisim.com/blog/hazir-web-tasarim-ile-hizli-dijitallesme) — 2025-05-29
-- [Web Tasarım](https://integralbilisim.com/blog/web-tasarim-hizmeti) — 2025-05-16
-- [Marka ve Patent Tescili](https://integralbilisim.com/blog/marka-ve-patent-tescili) — 2025-05-16
-- [Google Adwors Hizmeti](https://integralbilisim.com/blog/google-adwors-hizmeti) — 2025-05-16
-- [Web Tasarım Hazır Web Sitesi](https://integralbilisim.com/blog/web-tasarim-hazir-web-sitesi-iller) — 2025-05-16
-- [Sosyal Medya Hizmeti](https://integralbilisim.com/blog/sosyal-medya-hizmeti-iller) — 2025-05-16
-- [Responsive Web Tasarım Nedir ?](https://integralbilisim.com/blog/responsive-web-tasarim-nedir) — 2025-05-14
 - [Hazır Web Sitesi Nasıl Olmalıdır?](https://integralbilisim.com/blog/hazir-web-sitesi-nasil-olmalidir-3) — 2025-05-14
-- [Web Tasarım Fiyatları Neleri Kapsar?](https://integralbilisim.com/blog/web-tasarim-fiyatlari-neleri-kapsar-2) — 2025-05-14
 - [Kimler Web Sitesi Yaptırmalı?](https://integralbilisim.com/blog/kimler-web-sitesi-yaptirmali) — 2025-05-14
-- [Hosting Nedir?](https://integralbilisim.com/blog/hosting-nedir) — 2025-05-14
+- [Web Tasarım Fiyatları Neleri Kapsar?](https://integralbilisim.com/blog/web-tasarim-fiyatlari-neleri-kapsar) — 2025-05-14
 - [Domain Nedir?](https://integralbilisim.com/blog/domain-nedir) — 2025-05-14
+- [Hosting Nedir?](https://integralbilisim.com/blog/hosting-nedir) — 2025-05-14
 - [Mobil uygulamalarda en çok yapılan 10 güvenlik hatası](https://integralbilisim.com/blog/mobil-uygulamalarda-en-cok-yapilan-10-guvenlik-hatasi) — 2025-05-09
 - [Türkiye'de İnternet Sitelerinin Tarihi](https://integralbilisim.com/blog/turkiyede-internet-sitelerinin-tarihi) — 2025-05-09
 - [İnternette Nasıl Reklam Verilir?](https://integralbilisim.com/blog/internette-nasil-reklam-verilir) — 2025-05-09
-- [Web Sitesi Yaptırmadan Önce Bilmeniz Gerekenler](https://integralbilisim.com/blog/web-sitesi-yaptirmadan-once-bilmeniz-gerekenler) — 2025-05-09
-- [Yeni Türk Ticaret Kanunu](https://integralbilisim.com/blog/yeni-turk-ticaret-kanunu) — 2025-05-09
 - [Responsive Tasarım Nedir?](https://integralbilisim.com/blog/responsive-tasarim-nedir) — 2025-05-09
+- [Yeni Türk Ticaret Kanunu](https://integralbilisim.com/blog/yeni-turk-ticaret-kanunu) — 2025-05-09
+- [Web Sitesi Yaptırmadan Önce Bilmeniz Gerekenler](https://integralbilisim.com/blog/web-sitesi-yaptirmadan-once-bilmeniz-gerekenler) — 2025-05-09
 - [Hazır Site Hakkında](https://integralbilisim.com/blog/hazir-web-sitesi-nasil-olmalidir) — 2025-05-09
-- [Hazır Site](https://integralbilisim.com/blog/hazir-site) — 2023-08-19
-- [Web Sitesi Tasarımı](https://integralbilisim.com/blog/web-sitesi-tasarimi) — 2023-08-18
-- [Hazır Site Nedir?](https://integralbilisim.com/blog/hazir-site-nedir) — 2023-06-22
-- [Patent Tescili](https://integralbilisim.com/blog/patent-tescili) — 2023-03-26
-- [Hazır Web Sitesi Detaylar](https://integralbilisim.com/blog/hazir-web-sitesi-detaylar) — 2023-02-13
-- [Web Site Tasarımı Avantajları](https://integralbilisim.com/blog/web-site-tasarimi-avantajlari) — 2022-04-23
-- [Mobil Uyumlu Web Tasarım Nedir](https://integralbilisim.com/blog/mobil-uyumlu-web-tasarim-nedir) — 2022-03-11
-- [Hazır Web Sitesi Avantajları](https://integralbilisim.com/blog/hazir-web-sitesi-avantajlari) — 2022-02-23
-- [Firma Hazır Web Siteleri](https://integralbilisim.com/blog/firma-hazir-web-siteleri) — 2022-02-13
-- [Sizin de Bir Web Siteniz Olsun](https://integralbilisim.com/blog/sizin-de-bir-web-siteniz-olsun) — 2021-04-21
-- [Logo Nedir, Logo Tasarımı Nasıl Yapılır?](https://integralbilisim.com/blog/logo-nedir-logo-tasarimi-nasil-yapilir) — 2021-03-26
-- [Mobil Uyumlu Web Tasarımı Yaparken Nelere Dikkat Edilir?](https://integralbilisim.com/blog/mobil-uyumlu-web-tasarimi-yaparken-nelere-dikkat-edilir) — 2020-09-22
-- [Hazır Rent A Car Sitesi](https://integralbilisim.com/blog/hazir-rent-a-car-sitesi) — 2020-06-10
-- [E-Ticaret Mobilya Web Siteleri](https://integralbilisim.com/blog/e-ticaret-mobilya-web-siteleri) — 2020-04-23
-- [Saat E-Ticaret Sitesi](https://integralbilisim.com/blog/saat-e-ticaret-sitesi) — 2020-03-24
-- [Mobil Uyumlu Web Tasarımı Nereden Alınır?](https://integralbilisim.com/blog/mobil-uyumlu-web-tasarimi-nereden-alinir) — 2020-01-13
-- [Mobil Uyumlu Web Tasarımı Nasıl Yapılır?](https://integralbilisim.com/blog/mobil-uyumlu-web-tasarimi-nasil-yapilir) — 2020-01-12
-- [Mobil Uyumlu Web Site Firması Seçerken Nelere Dikkat Edilir?](https://integralbilisim.com/blog/mobil-uyumlu-web-site-firmasi-secerken-nelere-dikkat-edilir) — 2019-05-26
-- [Web Sitesi Nasıl Açılır](https://integralbilisim.com/blog/web-sitesi-nasil-acilir) — 2019-03-18
-- [Web Tasarım Firmaları](https://integralbilisim.com/blog/web-tasarim-firmalari) — 2019-02-19
-- [Web Tasarım Yaptırmanın Avantajları](https://integralbilisim.com/blog/web-tasarim-yaptirmanin-avantajlari) — 2018-09-15
-- [Web sitesi Fiyatları](https://integralbilisim.com/blog/web-sitesi-fiyatlari) — 2018-08-24
-- [Web Tasarım Fiyatları](https://integralbilisim.com/blog/web-tasarim-fiyatlari) — 2018-06-16
-- [Marka Tescili Nedir](https://integralbilisim.com/blog/marka-tescili-nedir) — 2018-05-23
 
 ## Sık sorulan sorular
 ### Sitem ne kadar sürede yayına girer?

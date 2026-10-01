@@ -10,7 +10,8 @@
     "prebuild": "tsx scripts/gen-seo-files.ts",
     "brand": "tsx scripts/gen-brand-assets.ts",
     "pack:directadmin": "node scripts/pack-directadmin.mjs",
-    "seed": "tsx scripts/seed-posts.ts"
+    "seed": "tsx scripts/seed-posts.ts",
+    "test:redirects": "node scripts/test-redirects.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.2",
