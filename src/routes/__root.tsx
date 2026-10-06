@@ -14,6 +14,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { jsonLd, localBusinessSchema, organizationSchema, pageHead } from "@/lib/seo";
 import { CookieNotice } from "@/components/CookieNotice";
+import { getPublicConfig } from "@/lib/public-config";
 
 function NotFoundComponent() {
   return (
@@ -72,6 +73,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRoute({
+  loader: () => getPublicConfig(),
+  // Ayarlar oturum boyunca değişmez; her sayfa geçişinde sunucuya gitme.
+  staleTime: Infinity,
   head: () => {
     // Yalnızca varsayılan meta. Canonical burada verilmez: link'ler
     // tekilleştirilmediği için her alt sayfada ikinci bir canonical oluşurdu.
@@ -127,6 +131,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  const { ga4Id } = Route.useLoaderData();
   return (
     <>
       <Header />
@@ -135,7 +140,7 @@ function RootComponent() {
       </main>
       <Footer />
       <WhatsAppFloatingButton />
-      <CookieNotice />
+      <CookieNotice ga4Id={ga4Id} />
     </>
   );
 }

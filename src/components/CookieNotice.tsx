@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Cookie, X } from "lucide-react";
 
 const KEY = "ib-analytics-consent";
-export const GA4_ID = import.meta.env.VITE_GA4_ID as string | undefined;
 
 type Choice = "granted" | "denied";
 
@@ -16,11 +15,14 @@ const read = (): Choice | null => {
 };
 
 /**
- * Analitik çerez bildirimi. Yalnızca çerez kullanan bir ölçüm aracı
- * (GA4) yapılandırılmışsa gösterilir — çerez konmuyorken onay istemek
- * kullanıcıyı yanıltır. Vercel Analytics çerezsiz çalıştığı için buraya dahil değil.
+ * Analitik çerez bildirimi ve GA4 yüklemesi. Yalnızca ölçüm kimliği
+ * tanımlıysa gösterilir — çerez konmuyorken onay istemek kullanıcıyı yanıltır.
+ *
+ * Google Consent Mode v2 (temel mod): Google betiği, ziyaretçi "Kabul et"
+ * demeden hiç yüklenmez; yani onaydan önce Google'a hiçbir istek gitmez.
+ * Reklam depolama sinyalleri her durumda "denied" kalır.
  */
-export function CookieNotice() {
+export function CookieNotice({ ga4Id }: { ga4Id: string | null }) {
   const [choice, setChoice] = useState<Choice | null>(null);
   const [ready, setReady] = useState(false);
 
@@ -30,18 +32,22 @@ export function CookieNotice() {
   }, []);
 
   useEffect(() => {
-    if (choice !== "granted" || !GA4_ID) return;
+    if (choice !== "granted" || !ga4Id) return;
     if (document.getElementById("ga4-src")) return;
     const s = document.createElement("script");
     s.id = "ga4-src";
     s.async = true;
-    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
     document.head.appendChild(s);
     const init = document.createElement("script");
     init.id = "ga4-init";
-    init.textContent = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA4_ID}',{anonymize_ip:true});`;
+    init.textContent =
+      "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}" +
+      "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});" +
+      "gtag('consent','update',{analytics_storage:'granted'});" +
+      `gtag('js',new Date());gtag('config','${ga4Id}',{anonymize_ip:true});`;
     document.head.appendChild(init);
-  }, [choice]);
+  }, [choice, ga4Id]);
 
   const decide = (next: Choice) => {
     try {
@@ -52,7 +58,7 @@ export function CookieNotice() {
     setChoice(next);
   };
 
-  if (!GA4_ID || !ready || choice) return null;
+  if (!ga4Id || !ready || choice) return null;
 
   return (
     <div
