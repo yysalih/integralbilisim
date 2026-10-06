@@ -9,11 +9,50 @@ export const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 /** Yükleme klasörleri. Yol /uploads/... olmalı: mediaUrl() bunu CDN'e yönlendirir. */
 const FOLDERS = ["blog"] as const;
 
-const json = (status: number, body: Record<string, unknown>) =>
+/**
+ * Panel ayrı bir adreste (admin.integralbilisim.com) çalıştığı için bu uç farklı
+ * kaynaktan çağrılır. Yalnızca listedeki kaynaklara izin verilir; çerez kullanılmaz
+ * (kimlik Bearer jetonuyla gelir), dolayısıyla Allow-Credentials açılmaz.
+ * Birden fazla kaynak virgülle: yerelde geliştirme için http://localhost:3000 eklenebilir.
+ */
+const allowedOrigins = () =>
+  (process.env.ADMIN_ORIGIN ?? "https://admin.integralbilisim.com")
+    .split(",")
+    .map((o) => o.trim().replace(/\/$/, ""))
+    .filter(Boolean);
+
+const corsFor = (request: Request): Record<string, string> => {
+  const origin = request.headers.get("origin");
+  const base = { Vary: "Origin" };
+  return origin && allowedOrigins().includes(origin)
+    ? { ...base, "Access-Control-Allow-Origin": origin }
+    : base;
+};
+
+const json = (status: number, body: Record<string, unknown>, cors: Record<string, string>) =>
   new Response(JSON.stringify(body), {
     status,
-    headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" },
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store",
+      ...cors,
+    },
   });
+
+/** Tarayıcının POST öncesi sorduğu izin kontrolü (OPTIONS). */
+export const handleImagePreflight = (request: Request): Response => {
+  const cors = corsFor(request);
+  if (!cors["Access-Control-Allow-Origin"]) return new Response(null, { status: 403, headers: cors });
+  return new Response(null, {
+    status: 204,
+    headers: {
+      ...cors,
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Authorization, Content-Type",
+      "Access-Control-Max-Age": "86400",
+    },
+  });
+};
 
 /**
  * Dosyanın gerçek türünü ilk baytlarından çıkarır. İstemcinin söylediği
@@ -49,41 +88,44 @@ const slugify = (name: string) =>
  * Başarıda: { ok, path, url }. Yazının `image` alanına `path` yazılır (mediaUrl onu CDN'e çevirir).
  */
 export const handleImageUpload = async (request: Request): Promise<Response> => {
-  const auth = await requireAdmin(request);
-  if (!auth.ok) return json(auth.status, { ok: false, error: auth.message });
+  const cors = corsFor(request);
+  const json_ = (status: number, body: Record<string, unknown>) => json(status, body, cors);
 
-  if (!isBunnyConfigured) return json(503, { ok: false, error: "Görsel deposu yapılandırılmamış." });
+  const auth = await requireAdmin(request);
+  if (!auth.ok) return json_(auth.status, { ok: false, error: auth.message });
+
+  if (!isBunnyConfigured) return json_(503, { ok: false, error: "Görsel deposu yapılandırılmamış." });
 
   // Gövdeyi belleğe almadan önce ilan edilen boyuta bak (üst sınır + form payı).
   const declared = Number(request.headers.get("content-length") ?? 0);
   if (declared > MAX_IMAGE_BYTES + 64 * 1024) {
-    return json(413, { ok: false, error: "Dosya çok büyük (en fazla 5 MB)." });
+    return json_(413, { ok: false, error: "Dosya çok büyük (en fazla 5 MB)." });
   }
 
   let form: FormData;
   try {
     form = await request.formData();
   } catch {
-    return json(400, { ok: false, error: "multipart/form-data bekleniyordu." });
+    return json_(400, { ok: false, error: "multipart/form-data bekleniyordu." });
   }
 
   const file = form.get("file");
   if (!(file instanceof File) || file.size === 0) {
-    return json(400, { ok: false, error: "`file` alanında bir görsel gönderin." });
+    return json_(400, { ok: false, error: "`file` alanında bir görsel gönderin." });
   }
   if (file.size > MAX_IMAGE_BYTES) {
-    return json(413, { ok: false, error: "Dosya çok büyük (en fazla 5 MB)." });
+    return json_(413, { ok: false, error: "Dosya çok büyük (en fazla 5 MB)." });
   }
 
   const folder = String(form.get("folder") ?? "blog");
   if (!(FOLDERS as readonly string[]).includes(folder)) {
-    return json(400, { ok: false, error: `Geçersiz klasör. İzinli: ${FOLDERS.join(", ")}.` });
+    return json_(400, { ok: false, error: `Geçersiz klasör. İzinli: ${FOLDERS.join(", ")}.` });
   }
 
   const bytes = new Uint8Array(await file.arrayBuffer());
   const kind = sniff(bytes);
   if (!kind) {
-    return json(415, { ok: false, error: "Yalnızca JPEG, PNG, WebP ve AVIF görseller yüklenebilir." });
+    return json_(415, { ok: false, error: "Yalnızca JPEG, PNG, WebP ve AVIF görseller yüklenebilir." });
   }
 
   // Her yükleme benzersiz adla yazılır: CDN önbelleğini temizlemek gerekmez,
@@ -94,10 +136,10 @@ export const handleImageUpload = async (request: Request): Promise<Response> => 
   const name = `${base}-${randomBytes(4).toString("hex")}.${kind.ext}`;
 
   const stored = await uploadToBunny(`${dir}/${name}`, bytes);
-  if (!stored.ok) return json(502, { ok: false, error: stored.error });
+  if (!stored.ok) return json_(502, { ok: false, error: stored.error });
 
   const path = `/${dir}/${name}`;
   const cdn = (process.env.VITE_MEDIA_CDN_URL ?? "https://integralbilisim.b-cdn.net").replace(/\/$/, "");
   console.log(`[admin] Görsel yüklendi: ${path} (${bytes.length} bayt, ${auth.email ?? auth.userId})`);
-  return json(200, { ok: true, path, url: `${cdn}${path}`, bytes: bytes.length, type: kind.type });
+  return json_(200, { ok: true, path, url: `${cdn}${path}`, bytes: bytes.length, type: kind.type });
 };

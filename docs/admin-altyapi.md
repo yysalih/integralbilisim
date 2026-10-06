@@ -1,6 +1,21 @@
 # Yönetim paneli altyapısı
 
-Panel (`/admin`) bu temelin üstüne yazılır. Burada hazır olanlar ve nasıl kullanılacakları var.
+Panel bu temelin üstüne yazılır. Burada hazır olanlar ve nasıl kullanılacakları var.
+
+## Mimari
+
+- **Panel ayrı bir adreste çalışır: `https://admin.integralbilisim.com`.** Ana site (`integralbilisim.com`) ayrı bir
+  Node uygulamasıdır; panel onun içinde değildir.
+- **Aynı Supabase projesini kullanır** (`integralbilisim`, ref `hlpnbchodsvswmmknteq`). Veri ve giriş orada;
+  panel `posts` ve `leads` tablolarını doğrudan, kullanıcının oturumuyla (anon anahtar + RLS) okuyup yazar.
+  URL ve anon anahtar herkese açık olacak şekilde tasarlanmıştır; `service_role` anahtarı panele **girmez**.
+- **Tek sunucu tarafı ihtiyaç görsel yükleme** ve o, ana sitede hazır: `POST https://integralbilisim.com/api/admin/upload`.
+  Panel farklı bir kaynaktan çağırdığı için CORS izni vardır (aşağıda). Bu yüzden panel istenirse **sunucusuz, statik bir
+  SPA** olabilir (Setup Node.js App gerekmez, dosyalar subdomain'in public_html'ine yüklenir).
+- Panel adresi `noindex` olmalı: `robots.txt` içinde `Disallow: /`, sayfalarda `<meta name="robots" content="noindex">`.
+- Supabase paneli > Authentication > URL Configuration: **Site URL** `https://admin.integralbilisim.com`, **Redirect URLs**
+  listesine `https://admin.integralbilisim.com/**` (parola sıfırlama/davet e-postaları bu adrese döner). Yerel geliştirme için
+  `http://localhost:3000/**` eklenebilir.
 
 ## Yetki modeli
 
@@ -28,6 +43,8 @@ Kaynak bilgisi `leads.payload->'attribution'` içinde (`channel`, `utm_*`, `land
 - `supabaseAs(token)` — `src/lib/supabase.server.ts`. Kullanıcının jetonuyla çalışan istemci (RLS geçerli).
   Yönetim uçlarında `service_role` yerine bunu kullanın.
 - `*.server.ts` dosyaları rotalardan **statik import edilemez**; handler içinde `await import(...)` ile yükleyin.
+- Bu yardımcılar **ana sitenin** deposundadır. Panel ayrı bir projeyse, sunucu tarafı bir şeye ihtiyaç duyarsa
+  (ör. yeni bir yönetim ucu) ya kendi `requireAdmin`'ini yazar ya da ucu ana sitede açıp aynı CORS desenini kullanır.
 
 ## Görsel yükleme
 
@@ -39,6 +56,10 @@ Kaynak bilgisi `leads.payload->'attribution'` içinde (`channel`, `utm_*`, `land
 | `folder` | İsteğe bağlı; şimdilik yalnızca `blog` |
 
 Başlık: `Authorization: Bearer <supabase erişim jetonu>` (`supabase.auth.getSession()` → `access_token`).
+
+**CORS:** yalnızca `ADMIN_ORIGIN` ortam değişkenindeki adreslere izin verilir (varsayılan `https://admin.integralbilisim.com`;
+virgülle birden fazla, yerelde `http://localhost:3000` eklenebilir). Çerez kullanılmaz, kimlik Bearer jetonuyla gelir. Tarayıcı
+önce `OPTIONS` ile izin sorar (204); izinsiz adres 403 alır. Panel `fetch`'e `credentials` eklememelidir.
 
 ```js
 const fd = new FormData();
@@ -63,7 +84,7 @@ Dosya adı sunucuda temizlenir ve rastgele ek alır; aynı ada ikinci yükleme e
 temizlemek gerekmez. Görsel işleme (yeniden boyutlandırma/WebP) yoktur; kapak için ~1600 px genişlik önerilir
 ve istemcide küçültüp yüklemek en iyisidir.
 
-Ortam değişkenleri (sunucuda): `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_KEY`, `BUNNY_STORAGE_HOST` (isteğe bağlı).
+Ortam değişkenleri (ana sitenin sunucusunda): `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_KEY`, `BUNNY_STORAGE_HOST` (isteğe bağlı), `ADMIN_ORIGIN` (isteğe bağlı).
 
 ## Sitemap
 
