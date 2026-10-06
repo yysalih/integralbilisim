@@ -6,7 +6,7 @@ import {
   Scripts,
   useRouter,
 } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { Header } from "@/components/Header";
@@ -15,6 +15,7 @@ import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { jsonLd, localBusinessSchema, organizationSchema, pageHead } from "@/lib/seo";
 import { CookieNotice } from "@/components/CookieNotice";
 import { getPublicConfig } from "@/lib/public-config";
+import { attachClickTracking } from "@/lib/track";
 
 function NotFoundComponent() {
   return (
@@ -132,6 +133,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { ga4Id } = Route.useLoaderData();
+  useEffect(() => attachClickTracking(), []);
   return (
     <>
       <Header />

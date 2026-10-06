@@ -8,6 +8,7 @@ import { auditSite, measureSpeed, sendAuditLead } from "@/lib/audit.functions";
 import { allFindings, buildResult } from "@/lib/audit/score";
 import { BAND, type AuditResult, type CategoryResult } from "@/lib/audit/types";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/track";
 
 const STEPS = [
   "Adres doğrulanıyor",
@@ -45,6 +46,7 @@ export function AuditTool({ initialUrl }: { initialUrl?: string }) {
     async (e?: FormEvent) => {
       e?.preventDefault();
       if (!url.trim()) return;
+      track("audit_start", { entry: initialUrl ? "prefilled" : "manual" });
       setPhase("running");
       setStepIndex(0);
       setError("");
@@ -70,17 +72,21 @@ export function AuditTool({ initialUrl }: { initialUrl?: string }) {
           };
         }
 
-        setResult(
-          buildResult(url.trim(), server.finalUrl, server.fetchedAt, [hiz, ...server.categories]),
-        );
+        const built = buildResult(url.trim(), server.finalUrl, server.fetchedAt, [
+          hiz,
+          ...server.categories,
+        ]);
+        setResult(built);
+        track("audit_complete", { score: built.total, speed_measured: hiz.ratio !== null });
         setPhase("done");
         setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
       } catch (err) {
+        track("audit_error");
         setError(err instanceof Error ? err.message : "Site taranamadı.");
         setPhase("error");
       }
     },
-    [url],
+    [url, initialUrl],
   );
 
   // Adres bağlantıyla geldiyse kullanıcı tekrar tıklamasın.
@@ -98,7 +104,7 @@ export function AuditTool({ initialUrl }: { initialUrl?: string }) {
     setGateState("sending");
     const findings = allFindings(result.categories);
     try {
-      await sendAuditLead({
+      const res = await sendAuditLead({
         data: {
           email: String(fd.get("email") ?? ""),
           targetUrl: result.finalUrl,
@@ -109,8 +115,14 @@ export function AuditTool({ initialUrl }: { initialUrl?: string }) {
           website: String(fd.get("website") ?? ""),
         },
       });
+      track(res.ok ? "generate_lead" : "form_error", {
+        lead_source: "site_audit",
+        score: result.total,
+        critical_count: findings.filter((f) => f.severity === "kritik").length,
+      });
     } catch (err) {
       console.error(err);
+      track("form_error", { lead_source: "site_audit" });
     }
     // Bildirim gitmese de rapor açılır: değer kullanıcıya vaat edildi.
     setUnlocked(true);

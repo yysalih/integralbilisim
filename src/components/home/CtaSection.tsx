@@ -7,7 +7,7 @@ import { COMPANY, whatsappLink } from "@/lib/company";
 /** Dönüşüm bölümü — gradient kenarlıklı glow kart, koyu zemin. */
 export function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a12] py-20 md:py-28">
+    <section data-track-location="home_cta" className="relative overflow-hidden bg-[#0a0a12] py-20 md:py-28">
       {/* Arka plan görseli + koyu gradyan sandviçi (şablon 5.5) */}
       <img
         src={mediaUrl("/covers/2.jpeg")}

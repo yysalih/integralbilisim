@@ -83,7 +83,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Çerezler",
     body: [
       "Sitenin çalışması için zorunlu olan teknik çerezler dışında çerez, siteye ilk girişinizde verdiğiniz açık onayla kullanılır.",
-      "Onay verirseniz ziyaretçi istatistiği için Google Analytics 4 (Google Ireland Limited) devreye girer. Hangi sayfaların görüntülendiği, sitede geçirilen süre, tahmini konum (ülke/şehir düzeyinde), cihaz ve tarayıcı türü ile telefon, WhatsApp ve form düğmelerine tıklanıp tıklanmadığı gibi kullanım bilgileri toplanır; IP adresi anonimleştirilir. Bu bilgiler sizi kimliğinizle tanımlamak için kullanılmaz ve reklam amacıyla kullanılmaz.",
+      "Onay verirseniz ziyaretçi istatistiği için Google Analytics 4 (Google Ireland Limited) devreye girer. Hangi sayfaların görüntülendiği, sitede geçirilen süre, tahmini konum (ülke/şehir düzeyinde), cihaz ve tarayıcı türü ile telefon, WhatsApp ve form düğmelerine tıklanıp tıklanmadığı, teklif sihirbazında ve site analizi aracında hangi adımlara ulaşıldığı gibi kullanım bilgileri toplanır. Forma yazdığınız ad, e-posta, telefon ve mesaj gibi bilgiler Google Analytics'e gönderilmez; IP adresi anonimleştirilir. Bu bilgiler sizi kimliğinizle tanımlamak için kullanılmaz ve reklam amacıyla kullanılmaz.",
       "Onay vermediğiniz ya da \"Reddet\" dediğiniz sürece Google Analytics yüklenmez, Google'a herhangi bir istek gönderilmez ve site aynı şekilde çalışmaya devam eder. Tercihinizi tarayıcınızın site verilerini temizleyerek her zaman değiştirebilirsiniz.",
     ],
   },

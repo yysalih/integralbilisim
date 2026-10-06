@@ -6,6 +6,7 @@ import { sendContactMessage } from "@/lib/contact.functions";
 import { SERVICES } from "@/lib/services";
 import { useRevealOnce } from "@/hooks/useRevealOnce";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/track";
 import { ConsentFields } from "@/components/ConsentFields";
 
 type SendState = "idle" | "sending" | "sent" | "error";
@@ -35,6 +36,10 @@ export function ContactSection() {
           consentMarketing: fd.get("consentMarketing") === "on",
         },
       });
+      track(result.ok ? "generate_lead" : "form_error", {
+        lead_source: "contact",
+        form_location: "home_form",
+      });
       if (result.ok) {
         setState("sent");
         form.reset();
@@ -43,12 +48,13 @@ export function ContactSection() {
       }
     } catch (err) {
       console.error(err);
+      track("form_error", { lead_source: "contact", form_location: "home_form" });
       setState("error");
     }
   };
 
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-28">
+    <section data-track-location="home_contact" className="relative overflow-hidden bg-background py-20 md:py-28">
       {/* Camın üstünde duracağı zemin */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-[65%]"

@@ -15,7 +15,7 @@ export function FaqSection() {
   const { ref, revealed } = useRevealOnce<HTMLDivElement>(0.12);
 
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-28">
+    <section data-track-location="home_faq" className="relative overflow-hidden bg-background py-20 md:py-28">
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-[60%]"
         style={{

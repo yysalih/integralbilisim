@@ -9,6 +9,7 @@ import { SERVICES } from "@/lib/services";
 import { cn } from "@/lib/utils";
 import { breadcrumbSchema, jsonLd, pageHead } from "@/lib/seo";
 import { ConsentFields } from "@/components/ConsentFields";
+import { track } from "@/lib/track";
 
 export const Route = createFileRoute("/iletisim")({
   head: () => {
@@ -56,6 +57,10 @@ function ContactPage() {
           consentMarketing: fd.get("consentMarketing") === "on",
         },
       });
+      track(result.ok ? "generate_lead" : "form_error", {
+        lead_source: "contact",
+        form_location: "contact_page_form",
+      });
       if (result.ok) {
         setState("sent");
         form.reset();
@@ -64,6 +69,7 @@ function ContactPage() {
       }
     } catch (err) {
       console.error(err);
+      track("form_error", { lead_source: "contact", form_location: "contact_page_form" });
       setState("error");
     }
   };
@@ -71,7 +77,7 @@ function ContactPage() {
   return (
     <>
       {/* Koyu hero */}
-      <section className="relative overflow-hidden bg-[#0a0a12] py-24 md:py-28">
+      <section data-track-location="contact_page" className="relative overflow-hidden bg-[#0a0a12] py-24 md:py-28">
       {/* Arka plan görseli + koyu gradyan sandviçi (şablon 5.5) */}
       <img
         src={mediaUrl("/covers/5.jpeg")}
@@ -105,7 +111,7 @@ function ContactPage() {
       </section>
 
       {/* Açık zemin: form + bilgiler */}
-      <section className="bg-background py-16 md:py-24">
+      <section data-track-location="contact_page" className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Form */}

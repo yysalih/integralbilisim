@@ -74,7 +74,7 @@ function AboutPage() {
 /** Kısa punchline + fotoğraf arka planlı açılış. */
 function ManifestoHero() {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a12] py-28 md:py-36">
+    <section data-track-location="about_page" className="relative overflow-hidden bg-[#0a0a12] py-28 md:py-36">
       <img
         src={mediaUrl("/covers/1.jpeg")}
         alt=""
@@ -144,7 +144,7 @@ function StoryBlock({
 }) {
   const { ref, revealed } = useRevealOnce<HTMLDivElement>(0.15);
   return (
-    <section className={cn("bg-background pb-20 md:pb-28", topSpacing && "pt-20 md:pt-28")}>
+    <section data-track-location="about_page" className={cn("bg-background pb-20 md:pb-28", topSpacing && "pt-20 md:pt-28")}>
       <div ref={ref} className="container mx-auto px-4">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className={cn(imageFirst && "lg:order-2")}>
@@ -201,7 +201,7 @@ function StoryBlock({
 function ApproachBlock() {
   const { ref, revealed } = useRevealOnce<HTMLDivElement>(0.15);
   return (
-    <section className="bg-background pb-20 md:pb-28">
+    <section data-track-location="about_page" className="bg-background pb-20 md:pb-28">
       <div ref={ref} className="container mx-auto max-w-3xl px-4 text-center">
         <h2
           className="font-bold text-foreground"
@@ -257,7 +257,7 @@ function MissionVisionSection() {
   ];
 
   return (
-    <section id="misyon-vizyon" className="scroll-mt-24 bg-background pb-20 md:pb-28">
+    <section data-track-location="about_page" id="misyon-vizyon" className="scroll-mt-24 bg-background pb-20 md:pb-28">
       <div ref={ref} className="container mx-auto px-4">
         <div className="grid gap-4 md:grid-cols-2">
           {cards.map((c, i) => (

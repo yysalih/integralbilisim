@@ -204,6 +204,7 @@ function Pricing({ slug, title, accent }: { slug: string; title: string; accent:
   const { min } = startingEstimate(slug);
   return (
     <div
+      data-track-location="service_pricing"
       className="flex flex-col gap-6 rounded-3xl border p-7 md:flex-row md:items-center md:justify-between md:p-8"
       style={{ borderColor: `${accent}33`, backgroundColor: `${accent}0b` }}
     >

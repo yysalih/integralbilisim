@@ -21,6 +21,7 @@ import {
 } from "@/lib/quote";
 import { PRICING_APPROVED } from "@/lib/pricing.config";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/track";
 
 const STEP_LABELS = ["Hizmet", "Kapsam", "Durumunuz", "Zaman & bütçe", "İletişim"];
 const DRAFT_KEY = "ib-quote-draft";
@@ -47,6 +48,14 @@ export function QuoteWizard({ initialServices }: { initialServices?: string }) {
     delivered: boolean;
   } | null>(null);
   const topRef = useRef<HTMLDivElement>(null);
+  const startedRef = useRef(false);
+
+  // Sihirbazın ilk gerçek etkileşimi: huni ölçümünün başlangıcı.
+  const markStarted = useCallback(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    track("quote_start", { entry: initialServices ? "service_page" : "direct" });
+  }, [initialServices]);
 
   // Yarım bırakılan sihirbaz aynı sekmede geri dönünce kaldığı yerden devam eder.
   useEffect(() => {
@@ -94,19 +103,26 @@ export function QuoteWizard({ initialServices }: { initialServices?: string }) {
       // Seçilen hizmetlerin kapsam sorusu yoksa 2. adım atlanır.
       let target = next;
       if (target === 1 && scopeQuestions.length === 0) target = next > step ? 2 : 0;
-      setStep(Math.max(0, Math.min(STEP_LABELS.length - 1, target)));
+      const clamped = Math.max(0, Math.min(STEP_LABELS.length - 1, target));
+      if (clamped > step) {
+        markStarted();
+        track("quote_step", { step_number: clamped + 1, step_name: STEP_LABELS[clamped] });
+      }
+      setStep(clamped);
       focusTop();
     },
-    [scopeQuestions.length, step, focusTop],
+    [scopeQuestions.length, step, focusTop, markStarted],
   );
 
-  const toggleService = (slug: string) =>
+  const toggleService = (slug: string) => {
+    markStarted();
     setAnswers((a) => ({
       ...a,
       services: a.services.includes(slug)
         ? a.services.filter((s) => s !== slug)
         : [...a.services, slug],
     }));
+  };
 
   const pickScope = (key: string, value: string, multi?: boolean) =>
     setAnswers((a) => {
@@ -152,6 +168,15 @@ export function QuoteWizard({ initialServices }: { initialServices?: string }) {
       });
       // Bildirim gitmese bile kullanıcı özetini görmeli; aksi halde 5 adımlık
       // emek boşa gider ve talep tamamen kaybolur. Alternatif kanal sunulur.
+      track(res.ok ? "generate_lead" : "form_error", {
+        lead_source: "quote_wizard",
+        lead_score: leadScore(answers, contact),
+        services: answers.services.join(","),
+        urgency: answers.urgency,
+        budget: answers.budget,
+        estimate_min: est.min,
+        estimate_max: est.max,
+      });
       setResult({ summary, min: est.min, max: est.max, delivered: res.ok });
       setSendState("sent");
       try {
@@ -162,6 +187,7 @@ export function QuoteWizard({ initialServices }: { initialServices?: string }) {
       focusTop();
     } catch (err) {
       console.error(err);
+      track("form_error", { lead_source: "quote_wizard" });
       setResult({ summary, min: est.min, max: est.max, delivered: false });
       setSendState("sent");
       focusTop();

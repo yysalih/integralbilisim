@@ -35,7 +35,7 @@ export function AuditPromo() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#0a0a12] py-20 md:py-28">
+    <section data-track-location="home_audit_promo" className="relative overflow-hidden bg-[#0a0a12] py-20 md:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div
           className="absolute -left-32 top-0 h-[30rem] w-[30rem] rounded-full opacity-35 blur-[110px] animate-[aurora-a_26s_ease-in-out_infinite]"

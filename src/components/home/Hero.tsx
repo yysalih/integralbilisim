@@ -6,6 +6,7 @@ import { FEATURED_WORK, type FeaturedWork } from "@/lib/references";
 import { SERVICES } from "@/lib/services";
 import { mediaUrl } from "@/lib/media";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/track";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { PhoneShowcase } from "./PhoneShowcase";
 
@@ -57,7 +58,7 @@ export function Hero() {
   }, [active, reducedMotion]);
 
   return (
-    <section
+    <section data-track-location="hero"
       className="relative flex items-center overflow-hidden bg-[#0a0a12]"
       style={{ minHeight: "100dvh" }}
     >
@@ -171,7 +172,10 @@ export function Hero() {
                     type="button"
                     role="tab"
                     aria-selected={tool === key}
-                    onClick={() => setTool(key)}
+                    onClick={() => {
+                      setTool(key);
+                      track("hero_tool_tab", { tool: key });
+                    }}
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all duration-300",
                       tool === key ? "text-white" : "text-white/45 hover:text-white/75",

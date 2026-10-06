@@ -55,7 +55,7 @@ function ServiceDetailPage() {
   return (
     <>
       {/* Koyu hero */}
-      <section className="relative overflow-hidden bg-[#0a0a12] py-24 md:py-32">
+      <section data-track-location="service_page" className="relative overflow-hidden bg-[#0a0a12] py-24 md:py-32">
         <div
           className="absolute -left-[10%] -top-[25%] h-[65%] w-[50%] rounded-full blur-[120px]"
           style={{ backgroundColor: `${accent}33`, animation: "orb-drift-a 15s ease-in-out infinite" }}
@@ -114,7 +114,7 @@ function ServiceDetailPage() {
       </section>
 
       {/* Açık zemin: detay + pakete dahil */}
-      <section className="bg-background py-16 md:py-24">
+      <section data-track-location="service_page" className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-5">
             <div className="lg:col-span-3">
@@ -175,7 +175,7 @@ function ServiceDetailPage() {
       )}
 
       {/* Diğer hizmetler */}
-      <section className="bg-[#0a0a12] py-16 md:py-20">
+      <section data-track-location="service_page" className="bg-[#0a0a12] py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">

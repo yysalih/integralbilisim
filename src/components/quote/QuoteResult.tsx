@@ -104,7 +104,7 @@ export function QuoteResult({
             netleştirilmesinden sonra yazılı olarak iletilir.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-3 print:hidden">
+          <div data-track-location="quote_result" className="mt-7 flex flex-wrap gap-3 print:hidden">
             <button
               type="button"
               onClick={() => window.print()}

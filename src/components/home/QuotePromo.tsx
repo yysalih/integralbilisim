@@ -29,7 +29,7 @@ export function QuotePromo() {
   const { ref, revealed } = useRevealOnce<HTMLDivElement>(0.25);
 
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-28">
+    <section data-track-location="home_quote_promo" className="relative overflow-hidden bg-background py-20 md:py-28">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 top-10 h-[26rem] w-[26rem] rounded-full opacity-[0.07] blur-[100px]"
