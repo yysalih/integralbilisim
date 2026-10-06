@@ -28,3 +28,16 @@ export const supabaseWrite = () => {
   writeClient ??= createClient(url, serviceKey, { auth: { persistSession: false } });
   return writeClient;
 };
+
+/**
+ * Giriş yapmış kullanıcının kimliğiyle çalışan istemci: sorgular o kullanıcının
+ * jetonuyla gider, dolayısıyla RLS politikaları (is_admin) uygulanır. Yönetim
+ * uçları service_role yerine bunu kullanmalı; yetki kontrolü veritabanında kalır.
+ */
+export const supabaseAs = (accessToken: string) => {
+  if (!url || !anonKey) return null;
+  return createClient(url, anonKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    global: { headers: { Authorization: `Bearer ${accessToken}` } },
+  });
+};

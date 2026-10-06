@@ -194,6 +194,9 @@ Aynı ekranda **Environment variables** bölümüne ekleyin:
 | \`SMTP_FROM\` | (İsteğe bağlı) gönderen adres; boşsa \`SMTP_USER\` kullanılır |
 | \`CONTACT_TO_EMAIL\` | Formların düşeceği adres (varsayılan: info@integralbilisim.com) |
 | \`PSI_API_KEY\` | Site analizi aracındaki hız ölçümü |
+| \`BUNNY_STORAGE_ZONE\` | Yönetim panelinden görsel yükleme: Bunny Storage Zone adı |
+| \`BUNNY_STORAGE_KEY\` | Aynı zone'un parolası (FTP & API Access > Password) |
+| \`BUNNY_STORAGE_HOST\` | (İsteğe bağlı) bölge uç noktası; boşsa \`storage.bunnycdn.com\` |
 | \`GA4_ID\` | Google Analytics 4 ölçüm kimliği (\`G-\` ile başlar). Boşsa çerez bildirimi çıkmaz, ölçüm yapılmaz |
 | \`SUPABASE_URL\` | Blog ve lead veritabanı |
 | \`SUPABASE_ANON_KEY\` | Blog okuma |
