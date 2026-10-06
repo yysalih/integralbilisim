@@ -8,6 +8,7 @@ import { auditSite, measureSpeed, sendAuditLead } from "@/lib/audit.functions";
 import { allFindings, buildResult } from "@/lib/audit/score";
 import { BAND, type AuditResult, type CategoryResult } from "@/lib/audit/types";
 import { cn } from "@/lib/utils";
+import { getAttribution } from "@/lib/attribution";
 import { track } from "@/lib/track";
 
 const STEPS = [
@@ -113,6 +114,7 @@ export function AuditTool({ initialUrl }: { initialUrl?: string }) {
           consentKvkk: fd.get("consentKvkk") === "on",
           consentMarketing: fd.get("consentMarketing") === "on",
           website: String(fd.get("website") ?? ""),
+          attribution: getAttribution(),
         },
       });
       track(res.ok ? "generate_lead" : "form_error", {

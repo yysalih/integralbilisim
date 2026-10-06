@@ -1,6 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
+import { attributionLines, attributionSchema } from "@/lib/attribution";
+
 const contactSchema = z.object({
   name: z.string().min(2, "Adınızı yazın").max(120),
   email: z.string().email("Geçerli bir e-posta girin"),
@@ -11,6 +13,7 @@ const contactSchema = z.object({
   consentKvkk: z.boolean().refine((v) => v === true, { message: "KVKK onayı gerekli" }),
   /** Ticari elektronik ileti izni — ayrı ve isteğe bağlı. */
   consentMarketing: z.boolean().default(false),
+  attribution: attributionSchema,
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
@@ -29,7 +32,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       email: data.email,
       name: data.name,
       phone: data.phone,
-      payload: { subject: data.subject, message: data.message },
+      payload: { subject: data.subject, message: data.message, attribution: data.attribution },
       consentKvkk: data.consentKvkk,
       consentMarketing: data.consentMarketing,
     });
@@ -44,6 +47,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         data.phone ? `Telefon: ${data.phone}` : null,
         `KVKK onayı: evet · Ticari ileti izni: ${data.consentMarketing ? "evet" : "hayır"}`,
         `Gönderim: ${new Date().toISOString()}`,
+        ...attributionLines(data.attribution),
         "",
         data.message,
       ]

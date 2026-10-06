@@ -1,6 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
+import { attributionLines, attributionSchema } from "@/lib/attribution";
+
 const quoteSchema = z.object({
   name: z.string().min(2, "Adınızı yazın").max(120),
   company: z.string().max(160).optional().or(z.literal("")),
@@ -20,6 +22,7 @@ const quoteSchema = z.object({
   consentMarketing: z.boolean().default(false),
   /** Bot tuzağı: gerçek kullanıcı bu alanı doldurmaz. */
   website: z.string().max(200).optional().or(z.literal("")),
+  attribution: attributionSchema,
 });
 
 export type QuoteInput = z.infer<typeof quoteSchema>;
@@ -50,6 +53,7 @@ export const sendQuoteRequest = createServerFn({ method: "POST" })
         estimateMin: data.estimateMin,
         estimateMax: data.estimateMax,
         priceShown: data.priceShown,
+        attribution: data.attribution,
       },
       consentKvkk: data.consentKvkk,
       consentMarketing: data.consentMarketing,
@@ -89,6 +93,7 @@ export const sendQuoteRequest = createServerFn({ method: "POST" })
         "",
         `KVKK onayı: evet · Ticari ileti izni: ${data.consentMarketing ? "evet" : "hayır"}`,
         `Gönderim: ${new Date().toISOString()}`,
+        ...attributionLines(data.attribution),
       ]
         .filter((line) => line !== null)
         .join("\n"),

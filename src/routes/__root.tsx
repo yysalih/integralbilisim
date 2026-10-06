@@ -15,6 +15,7 @@ import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { jsonLd, localBusinessSchema, organizationSchema, pageHead } from "@/lib/seo";
 import { CookieNotice } from "@/components/CookieNotice";
 import { getPublicConfig } from "@/lib/public-config";
+import { captureAttribution } from "@/lib/attribution";
 import { attachClickTracking } from "@/lib/track";
 
 function NotFoundComponent() {
@@ -133,7 +134,10 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { ga4Id } = Route.useLoaderData();
-  useEffect(() => attachClickTracking(), []);
+  useEffect(() => {
+    captureAttribution();
+    return attachClickTracking();
+  }, []);
   return (
     <>
       <Header />

@@ -3,6 +3,7 @@ import { z } from "zod";
 import { lookup } from "node:dns/promises";
 import { isIP } from "node:net";
 
+import { attributionLines, attributionSchema } from "@/lib/attribution";
 import { analyzeHtml, type PageInput } from "@/lib/audit/analyze";
 import { psiToCategory, type PsiPayload } from "@/lib/audit/psi";
 import type { CategoryResult } from "@/lib/audit/types";
@@ -198,6 +199,7 @@ const leadSchema = z.object({
   consentMarketing: z.boolean().default(false),
   /** Bot tuzağı. */
   website: z.string().max(200).optional().or(z.literal("")),
+  attribution: attributionSchema,
 });
 
 export type AuditLeadInput = z.infer<typeof leadSchema>;
@@ -213,7 +215,11 @@ export const sendAuditLead = createServerFn({ method: "POST" })
       source: "site_audit",
       email: data.email,
       website: data.targetUrl,
-      payload: { score: data.score, criticalCount: data.criticalCount },
+      payload: {
+        score: data.score,
+        criticalCount: data.criticalCount,
+        attribution: data.attribution,
+      },
       consentKvkk: data.consentKvkk,
       consentMarketing: data.consentMarketing,
     });
@@ -230,6 +236,7 @@ export const sendAuditLead = createServerFn({ method: "POST" })
         `E-posta: ${data.email}`,
         `KVKK onayı: evet · Ticari ileti izni: ${data.consentMarketing ? "evet" : "hayır"}`,
         `Gönderim: ${new Date().toISOString()}`,
+        ...attributionLines(data.attribution),
       ].join("\n"),
     });
   });

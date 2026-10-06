@@ -69,6 +69,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "İşleme Amaçları ve Hukuki Sebep",
     body: [
       "İletişim formu üzerinden paylaştığınız ad, e-posta, telefon ve mesaj içeriği; yalnızca talebinizi yanıtlamak ve teklif sürecini yürütmek amacıyla, KVKK m.5/2-(c) ve (f) uyarınca sözleşmenin kurulması ve meşru menfaat hukuki sebeplerine dayanılarak işlenir.",
+      "Bir form gönderdiğinizde, talebinizin hangi kanaldan geldiğini (ör. Google araması, reklam, doğrudan ziyaret), sitemize ilk girdiğiniz sayfayı ve varsa reklam kampanyası bilgisini (UTM parametreleri) talebinizle birlikte kaydederiz; amaç hangi tanıtım çalışmasının talep getirdiğini anlamak ve talebinize daha iyi dönmektir. Bu bilgi, siteyi ziyaret ettiğiniz sürece yalnızca tarayıcınızın oturum belleğinde tutulur, sekmeyi kapattığınızda silinir ve form göndermezseniz bize ulaşmaz.",
       "Kampanya ve hizmet duyurusu gönderimi ayrı bir onaya tabidir; bu onay verilmediğinde tarafınıza ticari elektronik ileti gönderilmez. Verdiğiniz onayı dilediğiniz zaman geri alabilirsiniz.",
     ],
   },

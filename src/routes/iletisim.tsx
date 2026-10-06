@@ -9,6 +9,7 @@ import { SERVICES } from "@/lib/services";
 import { cn } from "@/lib/utils";
 import { breadcrumbSchema, jsonLd, pageHead } from "@/lib/seo";
 import { ConsentFields } from "@/components/ConsentFields";
+import { getAttribution } from "@/lib/attribution";
 import { track } from "@/lib/track";
 
 export const Route = createFileRoute("/iletisim")({
@@ -55,6 +56,7 @@ function ContactPage() {
           message: String(fd.get("message") ?? ""),
           consentKvkk: fd.get("consentKvkk") === "on",
           consentMarketing: fd.get("consentMarketing") === "on",
+          attribution: getAttribution(),
         },
       });
       track(result.ok ? "generate_lead" : "form_error", {

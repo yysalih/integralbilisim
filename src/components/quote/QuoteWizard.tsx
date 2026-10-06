@@ -21,6 +21,7 @@ import {
 } from "@/lib/quote";
 import { PRICING_APPROVED } from "@/lib/pricing.config";
 import { cn } from "@/lib/utils";
+import { getAttribution } from "@/lib/attribution";
 import { track } from "@/lib/track";
 
 const STEP_LABELS = ["Hizmet", "Kapsam", "Durumunuz", "Zaman & bütçe", "İletişim"];
@@ -164,6 +165,7 @@ export function QuoteWizard({ initialServices }: { initialServices?: string }) {
           consentKvkk: fd.get("consentKvkk") === "on",
           consentMarketing: fd.get("consentMarketing") === "on",
           website: String(fd.get("website") ?? ""),
+          attribution: getAttribution(),
         },
       });
       // Bildirim gitmese bile kullanıcı özetini görmeli; aksi halde 5 adımlık

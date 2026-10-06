@@ -6,6 +6,7 @@ import { sendContactMessage } from "@/lib/contact.functions";
 import { SERVICES } from "@/lib/services";
 import { useRevealOnce } from "@/hooks/useRevealOnce";
 import { cn } from "@/lib/utils";
+import { getAttribution } from "@/lib/attribution";
 import { track } from "@/lib/track";
 import { ConsentFields } from "@/components/ConsentFields";
 
@@ -34,6 +35,7 @@ export function ContactSection() {
           message: String(fd.get("message") ?? ""),
           consentKvkk: fd.get("consentKvkk") === "on",
           consentMarketing: fd.get("consentMarketing") === "on",
+          attribution: getAttribution(),
         },
       });
       track(result.ok ? "generate_lead" : "form_error", {
