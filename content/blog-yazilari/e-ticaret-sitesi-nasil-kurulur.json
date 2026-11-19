@@ -1,0 +1,133 @@
+{
+  "slug": "e-ticaret-sitesi-nasil-kurulur",
+  "title": "E-Ticaret Sitesi Nasıl Kurulur? KOBİ'ler İçin Adım Adım Rehber",
+  "category": "E-Ticaret",
+  "accent": "#10B981",
+  "excerpt": "E-ticaret sitesi nasıl kurulur? Alan adı ve altyapı seçiminden ödeme, kargo, yasal metinler ve ilk satışlara kadar KOBİ'ler için adım adım rehber.",
+  "body": [
+    {
+      "text": "E-ticaret sitesi kurmak için önce ne satacağınızı ve kime satacağınızı netleştirir, ardından alan adı, altyapı, ürün girişi, ödeme, kargo ve yasal metinleri sırayla tamamlarsınız. Bu rehber, küçük ve orta ölçekli işletmelerin sıfırdan bir mağaza açarken izleyebileceği adımları anlatıyor. Teknik terimleri mümkün olduğunca sade tuttuk; her adımda neyi neden yaptığınızı da açıkladık."
+    },
+    {
+      "heading": "Başlamadan önce iş modelinizi netleştirin",
+      "text": "Hangi ürünleri satacağınız, stoklu satış mı yapacağınız yoksa tedarikçinizin ürünü doğrudan göndermesini mi isteyeceğiniz, siteye en çok hangi kitlenin gireceği, sitenin yapısını baştan belirler. Stoklu bir mağazada ürün sayısı, varyantlar (beden, renk gibi) ve stok takibi önemlidir. Tedarikçi üzerinden satışta ise stok bilgisinin güncel tutulması ve siparişlerin tedarikçiye hızlıca iletilmesi süreçlerini planlamanız gerekir."
+    },
+    {
+      "text": "Bir de rakip analizi yapın. Google'da satacağınız ürünü aratın, ilk sıradaki mağazaların ürün sayfalarına, kategori yapısına ve ödeme adımına bakın. Onların neyi iyi yaptığını ve neyi eksik bıraktığını not edin. Bu notlar, sitenizin hangi noktalarda fark yaratabileceğini gösterir."
+    },
+    {
+      "heading": "Alan adı ve hosting: sitenizin temeli",
+      "text": "Alan adı, müşterinizin sizi hatırlayacağı adrestir. Kısa, okunması kolay ve markanızla ilişkili bir isim seçin. Türkiye'de işletmeler için .com.tr uzantısı yaygındır; uzantılar arasındaki farkları .com ve .com.tr Arasındaki Fark Nedir? yazımızda anlatıyoruz."
+    },
+    {
+      "text": "Hosting ise sitenizin dosyalarının ve veritabanının bulunduğu sunucudur. Mağazanız yoğun trafik aldığında hızın düşmemesi, düzenli yedekleme ve SSL sertifikası gibi konular burada belirlenir. Birçok hazır e-ticaret paketinde hosting pakete dahil gelir. Kendi sunucunuzu yönetecekseniz güncelleme ve güvenlik sorumluluğunu da üstlenmiş olursunuz. SSL sertifikası ise adres çubuğunda kilit simgesiyle görünen HTTPS bağlantısını sağlar. Ödeme alan bir sitede bu bağlantı olmazsa müşteri güveni ciddi biçimde zedelenir."
+    },
+    {
+      "heading": "Platform seçimi: hazır altyapı mı, özel yazılım mı?",
+      "text": "Platform, mağazanızın omurgasıdır. Hazır e-ticaret altyapıları kurulumu hızlandırır, temalar ve eklentilerle temel özellikleri hazır sunar, güncellemeleri ise sağlayıcı yönetir. Özel yazılım ise tasarımı ve iş akışını tamamen ihtiyacınıza göre kurmanıza imkân verir; ancak süresi uzundur ve bakım yükü daha fazladır."
+    },
+    {
+      "text": "KOBİ'ler için çoğu durumda hazır altyapı daha mantıklıdır. Karar verirken şu soruları sorun: Ürün sayınız ne kadar ve ne sıklıkla değişiyor? Pazaryeri, muhasebe ya da kargo programlarıyla entegrasyon gerekiyor mu? Ödeme yöntemlerini kendiniz seçebiliyor musunuz? Site güncellemelerini ekipte kim yapacak? Bu soruların cevapları, hangi altyapının size uygun olduğunu gösterir."
+    },
+    {
+      "text": "Platform seçerken mobil uyumlu bir tema, düzenli güncellenen bir yazılım ve ürün sayfalarıyla kategorileri arama motorlarına uygun biçimde düzenleyebilme gibi kriterlere bakın. Google, sayfaların başlıklarının, adreslerinin ve içeriğinin hem kullanıcılar hem de arama motorları için anlaşılır olmasını önerir. Bunu platformun sağlayıp sağlamadığını, denemeler yaparak görebilirsiniz."
+    },
+    {
+      "heading": "Ürünleri ekleme ve kategori yapısı",
+      "text": "Ürün girişi, mağaza kurarken en çok emek isteyen kısımdır. Her ürün için en az şu bilgileri hazırlayın: ürün adı, kısa ve uzun açıklama, fiyat ve KDV bilgisi, stok adedi, ölçüler ya da ağırlık, varyantlar ve kaliteli fotoğraflar. Ürün adını müşterinizin gerçekten yazacağı biçimde seçin. Kadın Siyah Deri Çanta gibi açık isimler, Özel Seri 2 gibi iç kodlardan çok daha iyi çalışır."
+    },
+    {
+      "text": "Kategori yapısını baştan doğru kurun. Ana kategoriler müşterinin aradığı gruplara göre olmalı, alt kategoriler de bu grupların içinde kalmalıdır. Ürün sayısı arttıkça yapı bozulursa hem müşteri kaybolur hem de arama motorları sitenizi doğru anlayamaz. Ürün girişinde izleyebileceğiniz sıra şöyledir:"
+    },
+    {
+      "text": "1. Ürün listenizi ve fotoğraflarınızı tek bir tabloda hazırlayın. Bu, eksik bilgi ve hata riskini azaltır."
+    },
+    {
+      "text": "2. Kategorileri önce oluşturun, ardından ürünleri bu kategorilere yerleştirin."
+    },
+    {
+      "text": "3. Her ürün sayfasında fiyat, stok durumu, kargo bilgisi ve iade koşulu görünür olsun."
+    },
+    {
+      "text": "4. İlk birkaç ürünü yükleyin ve sipariş akışını baştan sona bir kez deneyin. Sorun yoksa kalan ürünlere geçin."
+    },
+    {
+      "heading": "Ödeme altyapısını kurun",
+      "text": "Müşterinin ödeme adımında güven duyması satışı doğrudan etkiler. Türkiye'de sık kullanılan seçenekler şunlardır: kredi kartı ile ödeme, havale ya da EFT, kapıda ödeme ve kart tahsilatı için sanal POS ya da ödeme kuruluşu. Hangisini sunacağınız, ürün tipinize, müşteri kitlenize ve maliyetlere bağlıdır."
+    },
+    {
+      "text": "Sanal POS başvurusunu bankanızdan yapabilirsiniz. Ödeme kuruluşları ise birden çok kart ve ödeme yöntemini tek entegrasyonla sunabilir. Her iki yolda da komisyon oranları ve ödemelerin hesabınıza geçme süreleri farklı olabileceği için yazılı teklifleri karşılaştırın. Oranlar sektöre, işlem hacmine ve sözleşmeye göre değiştiği için bu yazıda bir rakam vermiyoruz."
+    },
+    {
+      "text": "Ödeme sayfasında güven işaretlerini eksik bırakmayın. SSL bağlantısı, iade koşulları ve iletişim bilgileri müşterinin kararını kolaylaştırır. Sepeti terk etme oranını düşürmek için ödeme adımını kısa tutun ve gereksiz form alanlarını kaldırın."
+    },
+    {
+      "heading": "Kargo ve iade süreçlerini yazılı hale getirin",
+      "text": "Kargo, müşterinin satın alma kararında çoğu zaman belirleyici olur. Kargo ücretini ürün sayfasında ya da sepette net gösterin. Ücretsiz kargo için bir tutar eşiği koyuyorsanız bunu da açıkça belirtin. Kargo firmanızla anlaşırken yalnızca birim ücrete değil, teslim süresine, takip imkânına ve hasar durumunda üstlendikleri sorumluluğa da bakın."
+    },
+    {
+      "text": "İade koşulları da yazılı olmalıdır: iade süresi, hangi durumda iade alınacağı, iade kargo ücretini kimin ödeyeceği ve paranın ne kadar sürede geri döneceği. Müşteri bunları bulamazsa şikâyet ve geri ödeme talepleri artar. Sipariş ve stok takibini kargo sürecine bağlayıp müşteriye otomatik takip numarası gönderebilirseniz destek yükünüz de azalır."
+    },
+    {
+      "heading": "Yasal metinler ve ETBİS kaydı",
+      "text": "Kendi sitenizden satış yapıyorsanız birkaç yasal konuya dikkat etmeniz gerekir. Bunların başında mesafeli satış sözleşmesi, ön bilgilendirme formu, KVKK aydınlatma metni, gizlilik politikası ve çerez bilgilendirmesi gelir. Metinleri hazır şablonlardan almak mümkündür, ancak işinize uyduğunu bir avukat ya da mali müşavirle kontrol ettirmeniz sağlıklı olur."
+    },
+    {
+      "text": "ETBİS, Ticaret Bakanlığı'nın elektronik ticaret bilgi sistemidir. Kendi elektronik ticaret ortamınızda, yani sitenizde satış yapacaksanız kayıt yükümlülüğünüz vardır. Yurt içindeki bir pazaryeri üzerinden satış yapanların bu yükümlülüğü bulunmadığı, Bakanlığın sıkça sorulan sorular sayfasında belirtiliyor. Ancak pazaryerinden satış yapmanız, kendi siteniz için kayıt zorunluluğunu ortadan kaldırmaz. Kaydı, sitenizden ilk siparişi almadan önce tamamlamanızı öneririz."
+    },
+    {
+      "text": "Kayıt için gereken belgeler, yöntem ve sonradan yapılacak bildirimler Bakanlığın resmî sayfasında yer alır. Bu bilgiler değişebildiği için kaydı yapmadan önce güncel metni mutlaka kontrol edin."
+    },
+    {
+      "heading": "Lansmandan önce SEO ve hız kontrolü",
+      "text": "Mağazanız açıldığında arama motorlarının sitenizi bulabilmesi ve müşterinin sayfayı hızlı yüklemesi gerekir. Bunun için birkaç temel kontrol yeterlidir. Sitenin HTTPS üzerinden açıldığını, ana sayfa ve kategori sayfalarının kendi başlık ve açıklamalarına sahip olduğunu, XML site haritasının ve robots.txt dosyasının doğru olduğunu kontrol edin. Google, HTTPS'in bir sıralama sinyali olduğunu belirtmiş, ancak bunun hafif bir sinyal olduğunu da eklemiştir. Güvenli bağlantı tek başına sıralamayı yükseltmez; ama güven ve kullanıcı deneyimi için zorunludur."
+    },
+    {
+      "text": "Sayfa hızı için Core Web Vitals ölçütlerine bakın. Google'ın iyi kabul ettiği değerler şunlardır: en büyük içerik öğesinin yüklenme süresi (LCP) 2,5 saniye veya daha kısa, etkileşim gecikmesi (INP) 200 milisaniye veya daha kısa ve sayfa kayması (CLS) 0,1 veya daha az. Bu değerler mobil ve masaüstü için ayrı ayrı, sayfa yüklemelerinin yüzde 75'lik diliminde ölçülür. Büyük ve sıkıştırılmamış ürün görselleri en sık yavaşlık nedenidir; görselleri uygun boyutta ve modern bir formatta yükleyin."
+    },
+    {
+      "text": "Google Search Console'u kurup site haritanızı gönderin. Böylece hangi sayfaların dizinlendiğini ve sitenize hangi aramalarla geldiklerini görebilirsiniz. Yerel aramalarda görünürlük için Google İşletme Profili Nasıl Oluşturulur? yazımızdaki adımları izleyebilirsiniz; profildeki ad, adres ve telefon bilgilerinin sitenizdekilerle birebir aynı olması önemlidir."
+    },
+    {
+      "heading": "Ölçüm ve test: satışa hazır mısınız?",
+      "text": "Lansmandan önce sitenizi gerçek bir müşteri gibi baştan sona deneyin. Bir ürün seçin, sepete ekleyin, adresinizi girin, ödeme yapın ve sipariş e-postasını kontrol edin. Bu testi hem bilgisayardan hem telefondan yapın. Ziyaretlerin büyük bölümü mobil cihazlardan geldiği için ödeme adımındaki küçük bir hata bile satış kaybına yol açabilir."
+    },
+    {
+      "text": "Ölçüm altyapısını da bu aşamada kurun. Google Analytics 4 ile sayfa görüntüleme, sepete ekleme, ödeme başlatma ve satın alma olaylarını izleyin. Reklam veriyorsanız reklam platformlarının dönüşüm etiketlerini aynı akışa bağlayın. Ölçüm kurulu değilse hangi kanalın satış getirdiğini bilemezsiniz ve bütçe tahmine dayanır."
+    },
+    {
+      "heading": "İlk satışlar ve büyüme",
+      "text": "İlk siparişler genellikle sosyal medya paylaşımları, çevrenizdeki duyurular ve küçük bütçeli reklam testleriyle gelir. Bütçeyi tek seferde harcamak yerine kanal başına küçük testler yapın. Hangi kanalın gerçekten satış getirdiğini ölçtükten sonra bütçeyi o kanala kaydırın."
+    },
+    {
+      "text": "Organik arama trafiği ise zaman alır. Ürün sayfalarınız, kategorileriniz ve içerikleriniz arama amacına uygun biçimde birikmeye başladıkça arama motorlarından gelen ziyaretler artar. Bu süreç genellikle birkaç ay sürer. Bu nedenle SEO'yu lansmanda bir kez yapıp bırakmak yerine düzenli bir çalışma olarak planlayın. SEO'nun ne olduğunu ve neden önemli olduğunu SEO Nedir? yazımızda anlattık."
+    },
+    {
+      "text": "Pazaryerleri de bir seçenektir. Kendi sitenizi pazaryerleriyle birlikte kullanmak, nakit akışını ve marka bilinirliğini dengelemenize yardımcı olabilir. Ancak her kanalın komisyon, stok ve sipariş yönetimi farklıdır; her birini ayrı ayrı hesaplayın."
+    },
+    {
+      "heading": "Sık sorulan sorular",
+      "text": "Sık sorulan soruların kısa yanıtları aşağıdadır."
+    },
+    {
+      "heading": "E-ticaret sitesi kurmak için programlama bilmek gerekir mi?",
+      "text": "Hazır e-ticaret altyapılarında kod yazmadan mağaza kurabilirsiniz. Tasarım, ürün girişi ve ödeme ayarları genellikle yönetim panelinden yapılır. Yine de arama motoru başlıkları, görsel boyutları ve yasal metinler gibi konularda bir uzmanla çalışmak hataların önüne geçer."
+    },
+    {
+      "heading": "Stoksuz, tedarikçi üzerinden satış yapabilir miyim?",
+      "text": "Evet, ancak tedarikçinin stok bilgisini güncel tutabilmeniz ve siparişleri hızlı iletebilmeniz gerekir. Stok bilgisi yanlış olursa müşteriye iptal bildirimi göndermek hem güveni zedeler hem de ek maliyet doğurur. Bu nedenle tedarikçi seçimini ürün kalitesi ve teslim hızına göre yapın."
+    },
+    {
+      "heading": "Kendi sitemden satış yapmak için ETBİS kaydı şart mı?",
+      "text": "Kendi elektronik ticaret ortamınızda, yani kendi sitenizde satış yapacaksanız kayıt yükümlülüğünüz vardır. Yalnızca yurt içi bir pazaryeri üzerinden satış yapıyorsanız bu yükümlülük bulunmadığı, Bakanlığın sıkça sorulan sorular sayfasında belirtiliyor. Her iki kanalı birlikte kullanıyorsanız kendi siteniz için kaydın gerektiğini unutmayın."
+    },
+    {
+      "heading": "Sitemi açtıktan sonra Google'da ne zaman görünürüm?",
+      "text": "Site haritanızı gönderdikten sonra Google'ın sayfalarınızı taramasının ve dizinlemesinin ne kadar süreceği sitenizin büyüklüğüne ve yapısına göre değişir; kesin bir süre garanti edilemez. Search Console'daki URL inceleme aracıyla önemli sayfalar için dizinleme isteği gönderebilirsiniz. Ürün sayfalarınızın özgün ve kaliteli olması, görünürlük için en belirleyici unsurdur."
+    },
+    {
+      "heading": "Bu işi bir ajansa yaptırmak mantıklı mı?",
+      "text": "Zamanınız kısıtlıysa, teknik ayrıntılar sizi yoruyorsa ya da yasal ve SEO gerekliliklerini tam olarak karşılamak istiyorsanız bir ajansla çalışmak mantıklıdır. İntegral Bilişim olarak 2007'den beri Kadıköy'den hizmet veriyoruz ve e-ticaret web siteleri hizmetimizde ihtiyacınıza göre kurulum ve ürün girişi gibi süreçlerde destek olabiliyoruz. Projenize uygun bir teklif için iletişim sayfamızdan ya da teklif formumuzdan bize ulaşabilirsiniz."
+    }
+  ]
+}
