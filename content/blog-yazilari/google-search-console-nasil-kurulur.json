@@ -1,0 +1,152 @@
+{
+  "slug": "google-search-console-nasil-kurulur",
+  "title": "Google Search Console Nasıl Kurulur? KOBİ'ler İçin Adım Adım Rehber",
+  "category": "SEO",
+  "accent": "#3B82F6",
+  "excerpt": "Google Search Console'a site nasıl eklenir? Alan mülkü ile URL öneki farkı, DNS ve HTML doğrulama, site haritası gönderimi ve sık yapılan hatalar adım adım.",
+  "body": [
+    {
+      "text": "Google Search Console, sitenizin Google aramasındaki performansını ücretsiz izlediğiniz Google aracıdır. Hangi aramalarda göründüğünüzü, bu aramalarda kaç kez gösterildiğinizi, kaç kişinin tıkladığını ve Google'ın sitenizdeki sayfaları dizinleyip dizinlemediğini bu araçtan görürsünüz. Bu yazıda Search Console'a siteyi nasıl ekleyeceğinizi, doğrulama yöntemlerini ve ilk hafta yapmanız gerekenleri adım adım anlatıyoruz."
+    },
+    {
+      "heading": "Search Console neden gerekli?",
+      "text": "Site yayına girdikten sonra ziyaretçilerin sizi hangi kelimelerle bulduğunu merak etmek doğaldır. Google Analytics, ziyaretçilerin sitenizde ne yaptığını gösterir. Search Console ise sitenizin Google aramasında nasıl göründüğünü anlatır. İkisi birbirini tamamlar ve birlikte okunduğunda hangi sayfaya emek vermeniz gerektiği daha net görünür."
+    },
+    {
+      "text": "Search Console'da en çok vakit geçireceğiniz bölüm Performans raporudur. Burada her sorgu için tıklama, gösterim, tıklama oranı ve ortalama konum bilgisi bulunur. Örneğin 'web tasarım fiyatları' gibi bir aramada sitenizin kaç kez çıktığını ve kaç kişinin tıkladığını bu rapordan öğrenebilirsiniz. Arama motoru optimizasyonunun temel mantığını henüz bilmiyorsanız SEO Nedir? yazımızı önce okumanızı öneririz."
+    },
+    {
+      "heading": "Kurulumdan önce mülk türünü seçin",
+      "text": "Search Console'a bir site eklemek için önce 'mülk' türünü seçmeniz gerekir. Google iki ana seçenek sunar ve bu seçim, hangi adreslerin verisinin tek bir yerde toplanacağını belirler."
+    },
+    {
+      "text": "Alan mülkü, ornek.com gibi alan adının tamamını tek seferde ekler. Alt alan adları (www, blog gibi) ile http ve https varyasyonlarının verisi aynı mülkte toplanır. Bu tür yalnızca DNS kaydıyla doğrulanır, bu yüzden alan adınızın DNS ayarlarına erişebilmeniz gerekir."
+    },
+    {
+      "text": "URL öneki mülkü, https://www.ornek.com/ gibi tam bir adresi ekler ve yalnızca o adresi kapsar. Bu nedenle www olan ve olmayan ya da http ve https olan adresler ayrı mülk olarak eklenmelidir. Doğrulama için HTML dosyası, HTML etiketi, Google Analytics ve Google Etiket Yöneticisi gibi daha fazla seçenek sunar."
+    },
+    {
+      "text": "Pratik öneri şudur: alan adı sağlayıcınızın paneline erişebiliyorsanız alan mülkü seçin. Erişemiyorsanız sitenizin asıl kullandığı adres için URL öneki mülkü açın. Hangi yöntemi seçerseniz seçin, mülk eklemenin sitenizin Google aramasındaki durumunu değiştirmediğini, yalnızca izlemenize imkân verdiğini unutmayın."
+    },
+    {
+      "heading": "Adım adım: Search Console'a site ekleme",
+      "text": "Aşağıdaki sırayı izlerseniz mülk ekleme ve doğrulama adımları çoğu sitede kısa sürer. Yalnızca DNS kaydının yayılması beklemesi uzayabilir:"
+    },
+    {
+      "text": "1. Search Console adresine (search.google.com/search-console) siteyi yönetecek Google hesabıyla girin."
+    },
+    {
+      "text": "2. Sol üstteki mülk seçiciyi açın ve + Mülk ekle seçeneğine tıklayın."
+    },
+    {
+      "text": "3. Mülk türünü seçin ve adresinizi yazın. Alan mülkünde yalnızca ornek.com yazın; www ya da https eklemeyin. URL öneki mülkünde ise tam adresi yazın."
+    },
+    {
+      "text": "4. Doğrulama yöntemini seçin ve ekranda gösterilen adımları uygulayın."
+    },
+    {
+      "text": "5. Doğrulama hemen tamamlanmazsa Daha sonra doğrula seçeneğiyle kaydı saklayın ve birkaç gün sonra yeniden deneyin."
+    },
+    {
+      "text": "6. Doğrulama tamamlandıktan sonra veriler birkaç gün içinde görünmeye başlar. İlk günlerde raporların boş ya da eksik görünmesi bu yüzden normaldir."
+    },
+    {
+      "heading": "Doğrulama yöntemleri: hangisini seçmeli?",
+      "text": "Doğrulama, sitenin gerçekten size ait olduğunu Google'a kanıtlar. Hangi yöntemlerin kullanılabileceği mülk türüne göre değişir:"
+    },
+    {
+      "text": "1. DNS kaydı: Alan mülkü için tek yöntemdir ve en kalıcı olanıdır. Search Console'un verdiği değeri, alan adı sağlayıcınızın panelinde bir TXT kaydı olarak eklersiniz. Kaydın yayılması en fazla iki üç gün sürebilir. Bu sürede doğrulama hata verirse bekleyip yeniden deneyin. DNS kaydı, tema değiştirseniz ya da sunucu taşısanız da etkilenmez."
+    },
+    {
+      "text": "2. HTML dosyası: Google'ın verdiği doğrulama dosyasını, adındaki hiçbir karakteri değiştirmeden sitenizin kök dizinine yüklersiniz. Yalnızca URL öneki mülklerinde kullanılabilir."
+    },
+    {
+      "text": "3. HTML etiketi: Verilen meta etiketini ana sayfanızın head bölümüne eklersiniz. Yalnızca URL öneki mülklerinde kullanılabilir. Sitenizin kodunu ya da tema ayarlarını düzenleyebiliyorsanız bu yol pratiktir."
+    },
+    {
+      "text": "4. Google Analytics ve Google Etiket Yöneticisi: Sitenizde bu araçlar zaten kuruluysa ve aynı Google hesabına yetkiniz varsa doğrulama kısa sürede tamamlanabilir. Bu yöntemler de yalnızca URL öneki mülklerinde kullanılabilir."
+    },
+    {
+      "text": "Bir uyarı önemlidir: doğrulama için eklediğiniz dosyayı, etiketi ya da DNS kaydını doğrulamadan sonra da silmeyin. Silinirse sitenize ait doğrulama kaybolabilir ve mülk üzerindeki erişiminiz etkilenebilir. Site yenileme ya da tema değiştirme gibi işlemlerden önce bu öğelerin yerinde kalmasını kontrol edin."
+    },
+    {
+      "heading": "Doğrulamadan sonra ilk yapmanız gerekenler",
+      "text": "Doğrulama tamamlandığında hemen yapılacak birkaç iş vardır. Bunları ilk hafta içinde tamamlarsanız Google'ın sitenizi daha doğru okumasına yardımcı olursunuz."
+    },
+    {
+      "text": "1. Site haritanızı gönderin. Sitenizin önemli sayfalarını listeleyen sitemap.xml dosyasının adresini, Dizine ekleme menüsü altındaki Site haritaları bölümüne yazın. Çoğu sitede adres https://adresiniz/sitemap.xml biçimindedir. Yazılımınız farklı bir dosya adı kullanıyorsa, dokümantasyonuna bakarak doğru adresi bulun."
+    },
+    {
+      "text": "2. Robots.txt dosyanıza Sitemap satırı ekleyin. Bu, site haritanızın yerini arama motorlarına ek bir yoldan da bildirir. Haritayı göndermek sayfalarınızın hemen sıralanacağı anlamına gelmez. Google haritayı hızla okur, ancak içindeki adresleri taraması zaman alabilir."
+    },
+    {
+      "text": "3. Ana sayfanızı ve kilit sayfalarınızı URL Denetleme aracıyla kontrol edin. Google'ın bu adresi nasıl gördüğünü ve dizinlenip dizinlenmediğini buradan görürsünüz. Dizinlenmemiş bir sayfa için dizine eklenmesini isteyebilirsiniz."
+    },
+    {
+      "text": "4. Sayfalar raporunu düzenli olarak okuyun. Dizine eklenmeyen sayfalar için Google'ın verdiği nedenler, giderilebilecek sorunlara işaret eder. Örneğin noindex etiketi, yönlendirme, bulunamayan sayfa (404) ya da taranıp dizine eklenmemiş sayfalar bu listede görünür."
+    },
+    {
+      "heading": "Sık yapılan hatalar",
+      "text": "Yeni kurulan sitelerde karşılaşılan sorunların çoğu birkaç tekrarlayan hatadan kaynaklanır. Bunlara dikkat ederseniz zaman kaybetmezsiniz:"
+    },
+    {
+      "text": "1. http ve https mülklerini karıştırmak. Sitenizin asıl adresi https ise http için de ayrı bir mülk açmak sizi yanıltabilir. Alan mülkü seçerseniz bu karmaşa büyük ölçüde ortadan kalkar."
+    },
+    {
+      "text": "2. Site haritasına yönlendiren, bulunamayan ya da engellenmiş adresleri eklemek. Yönlendirme veren ve 404 dönen adresler, ayrıca robots.txt ile engellenen sayfalar haritada hata oluşturur. Haritada yalnızca taranmasını istediğiniz, açık ve asıl adresler bulunmalıdır."
+    },
+    {
+      "text": "3. Test sürümündeki noindex etiketini canlıya taşımak. Yayın öncesinde sitenizi gizlemek için eklenen dizine eklememe etiketi, canlıya alırken unutulursa sitenin tamamı Google'dan düşebilir. Yayına almadan önce bu etiketin kaldırıldığını mutlaka kontrol edin."
+    },
+    {
+      "text": "4. Doğrulama dosyasını ya da etiketini silmek. Tema değişikliği, sunucu taşıma ya da temizlik sırasında yanlışlıkla silinmesi, doğrulamanın kaybolmasına yol açan yaygın nedenlerden biridir."
+    },
+    {
+      "heading": "Performans raporunda neye bakmalısınız?",
+      "text": "Performans raporunu ayda bir kez gözden geçirmek çoğu site için yeterlidir. Dört bölüme özellikle bakın:"
+    },
+    {
+      "text": "1. Sorgular: Kullanıcıların sizi bulmak için hangi kelimeleri yazdığını gösterir. Bu liste, yeni sayfa ve yazı fikirleri için en değerli kaynaklardan biridir. Bir sayfa için beklemediğiniz bir sorgu görüyorsanız, o konuda ayrı bir içerik planlamak isteyebilirsiniz."
+    },
+    {
+      "text": "2. Sayfalar: Hangi adreslerin daha çok gösterildiğini ve tıklandığını gösterir. Gösterimi yüksek ama tıklaması düşük sayfaların başlık ve açıklamalarını yeniden yazmak çoğu zaman en hızlı kazanımdır. Ürün satan bir mağazanız varsa, ürün sayfalarınızı E-Ticaret Sitesi Nasıl Kurulur? KOBİ'ler İçin Adım Adım Rehber yazımızdaki kontrol listesiyle karşılaştırabilirsiniz."
+    },
+    {
+      "text": "3. Ülke ve cihaz: Ziyaretçilerinizin hangi ülkeden ve hangi cihazla geldiğini gösterir. Yerel bir işletmeyseniz, Google İşletme Profili Nasıl Oluşturulur? Adım Adım Rehber yazımızda anlatılan profil bilgilerinizin tutarlı olması da yerel aramalardaki görünürlüğünüzü destekler."
+    },
+    {
+      "text": "4. Ortalama konum: Sitenizin ilgili aramalardaki ortalama yerini gösterir. Tek başına başarı ölçüsü değildir; tıklama ve gösterim verileriyle birlikte okuyun. Search Console verisini Google Analytics'teki dönüşüm verisiyle karşılaştırırsanız, trafiğin işe yarayıp yaramadığını daha net görürsünüz."
+    },
+    {
+      "heading": "Kurulumda yardıma mı ihtiyacınız var?",
+      "text": "Search Console kurulumu teknik olarak zor değildir. Ancak alan adı ayarlarına, sitenizin koduna ya da sunucu yapısına erişiminiz yoksa işin içinden çıkmak zaman alabilir. Sitenizi bir ajansla yaptırdıysanız doğrulama ve site haritası adımlarını bu ekiple birlikte tamamlamak genellikle en kısa yoldur."
+    },
+    {
+      "text": "DNS, site kodu ya da doğrulama konusunda emin değilseniz iletişim sayfamızdan bize ulaşabilirsiniz. Hangi adımların size ait olduğunu birlikte netleştirip sitenizin arama görünürlüğünü sağlam bir temele oturtabiliriz."
+    },
+    {
+      "heading": "Sık sorulan sorular",
+      "text": "Search Console kurulumuyla ilgili sık sorulan soruların kısa yanıtları aşağıdadır."
+    },
+    {
+      "heading": "Search Console ücretsiz mi?",
+      "text": "Evet. Google Search Console ücretsizdir ve bir Google hesabıyla kullanılır. Sitenin sahibi olduğunuzu doğrulamanız yeterlidir."
+    },
+    {
+      "heading": "Search Console'a eklemek Google'da sıralamamı değiştirir mi?",
+      "text": "Hayır. Google'ın yardım sayfasında da belirtildiği gibi mülk eklemek sitenizin Google aramasındaki durumunu değiştirmez. Yalnızca performansınızı izlemenize imkân verir."
+    },
+    {
+      "heading": "Doğrulamayı yapamıyorum, ne yapmalıyım?",
+      "text": "Sık rastlanan nedenlerden biri, DNS kaydının henüz yayılmamış olmasıdır. Kaydın yayılması iki üç gün sürebilir; bu süre dolduğunda yeniden deneyin. Hâlâ olmuyorsa TXT değerini alan adı panelinde doğru alana yapıştırıp yapıştırmadığınızı kontrol edin. Teknik erişiminiz yoksa alan adını yöneten kişiden ya da sitenizi yapan ekipten yardım isteyin."
+    },
+    {
+      "heading": "Site haritasını gönderdim, sayfalarım ne zaman görünür?",
+      "text": "Google site haritasını hızla okur, ancak içindeki sayfaların taranması ve dizinlenmesi zaman alabilir. Sonuçları Sayfalar raporundan takip edin. Sayfanızda teknik bir engel yoksa sabırlı olmak yeterlidir."
+    },
+    {
+      "heading": "Bir ajansa yaptırmak mantıklı mı?",
+      "text": "Sitenizi yapan ekip zaten alan adı ve site yönetimini üstleniyorsa, Search Console kurulumunu da onlara bırakmak genellikle daha hızlıdır. Kendiniz yapmak isterseniz bu yazıdaki sırayı izlemeniz yeterlidir."
+    }
+  ]
+}
