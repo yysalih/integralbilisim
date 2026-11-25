@@ -8,7 +8,6 @@ export const COMPANY = {
   logoTagline: "Bilişim ve Tasarım",
   foundedYear: 2007,
   phoneMobile: "+90 533 590 35 32",
-  phoneMobile2: "0554 959 50 55",
   email: "info@integralbilisim.com",
   address: "Esentepe Mah. Şht. Mehmet Mikdat Uluünlü Sok. No: 7, 34394 Şişli / İstanbul",
   /** Yapısal veri (schema.org PostalAddress) için adresin parçaları; address ile aynı kalmalı. */

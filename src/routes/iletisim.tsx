@@ -207,12 +207,6 @@ function ContactPage() {
                 >
                   {COMPANY.phoneMobile}
                 </a>
-                <a
-                  href={`tel:${COMPANY.phoneMobile2.replace(/\s/g, "")}`}
-                  className="block hover:text-accent"
-                >
-                  {COMPANY.phoneMobile2}
-                </a>
               </InfoCard>
               <InfoCard icon={Mail} title="E-posta">
                 <a href={`mailto:${COMPANY.email}`} className="hover:text-accent">

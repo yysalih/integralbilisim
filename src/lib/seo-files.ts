@@ -76,7 +76,7 @@ export const renderLlms = (posts: FeedPost[]): string => {
 - Ticari unvan: ${COMPANY.fullName}
 - Kuruluş: ${COMPANY.foundedYear}
 - Adres: ${COMPANY.address}
-- Telefon: ${COMPANY.phoneMobile} · ${COMPANY.phoneMobile2}
+- Telefon: ${COMPANY.phoneMobile}
 - E-posta: ${COMPANY.email}
 - Çalışma saatleri: ${COMPANY.workingHours}
 - Hizmet bölgesi: Türkiye geneli
