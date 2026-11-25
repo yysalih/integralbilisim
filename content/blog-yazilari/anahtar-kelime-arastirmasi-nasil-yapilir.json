@@ -1,0 +1,166 @@
+{
+  "slug": "anahtar-kelime-arastirmasi-nasil-yapilir",
+  "title": "Anahtar Kelime Araştırması Nasıl Yapılır? Adım Adım Rehber",
+  "category": "SEO",
+  "accent": "#3B82F6",
+  "excerpt": "Müşterileriniz Google'da hangi kelimelerle arama yapıyor? Arama önerileri, Keyword Planner, Trends ve Search Console ile KOBİ'ler için kelime listesi nasıl hazırlanır, anlatıyoruz.",
+  "body": [
+    {
+      "text": "Anahtar kelime araştırması, müşterilerinizin Google'da hangi kelimelerle ve hangi amaçla arama yaptığını bulup sitenizin içeriğini bu kelimelere göre planlama işidir. İnsanların kullandığı kelimeleri bilirseniz, onların sorusuna cevap veren sayfalar yazabilirsiniz. Bu yazıda ücretsiz yöntemlerle kelime listesinin nasıl çıkarılacağını, her kelimenin hangi sayfaya verileceğini ve yayından sonra sonucun nasıl ölçüleceğini adım adım anlatıyoruz."
+    },
+    {
+      "heading": "Anahtar kelime araştırması neden önemli?",
+      "text": "Kelime araştırması, sitenizde hangi konuda yazı yazacağınızı, hangi hizmet sayfasını öne çıkaracağınızı ve müşterinizin dilini nasıl kullanacağınızı belirler. Müşteriniz bir kelimeyi aratıyor, siz ise sitenizde farklı bir kelime kullanıyorsanız, iyi hazırlanmış bir sayfa bile o aramada görünmeyebilir. Örneğin bir mobilyacı 'döşemecilik' diye yazıyorken müşterileri 'koltuk kılıfı' diye arıyorsa, sitede bu ifadenin hiç geçmemesi büyük bir kayıptır."
+    },
+    {
+      "text": "Google'ın Arama Motoru Başlangıç Kılavuzu da sayfanızı yazarken kullanıcının hangi kelimeleri arayabileceğini düşünmenizi öneriyor. Arama motorlarının temel mantığını henüz öğrenmediyseniz SEO Nedir? yazımızı önce okuyabilirsiniz."
+    },
+    {
+      "heading": "Başlamadan önce tohum kelimelerinizi yazın",
+      "text": "Tohum kelimeler, işinizi en kısa haliyle anlatan 5 ile 10 arasındaki temel terimlerdir. Örneğin bir web tasarım ajansı için 'web tasarım', 'web sitesi yaptırma', 'hazır web sitesi' gibi ifadeler tohum kelimedir. Bu listeyi yalnızca kendi kafanızdan değil, satış ve müşteri hizmetleri ekibinizin sık duyduğu sorulardan da besleyin. Müşteri 'Kaç günde teslim edilir?' ya da 'Hangi ödeme seçenekleri var?' diye soruyorsa, bu sorular da birer arama kelimesidir."
+    },
+    {
+      "text": "Her kelimeyi üç soruyla süzün: Bu kelimeyi arayan kişi bizden hizmet alabilir mi? Sunduğumuz bir çözüm bu soruya cevap veriyor mu? Bu konuda gerçekten yazabileceğimiz bir bilgi var mı? Cevabı 'hayır' olan kelimeleri listeden çıkarın."
+    },
+    {
+      "heading": "Adım 1: Google arama önerilerini kullanın",
+      "text": "1. Google arama kutusuna tohum kelimenizi yazın ve açılan öneri listesini okuyun. Bu öneriler, insanların o kelimeyle birlikte en sık neyi aradığını gösterir. Kelimenin sonuna harf ekleyerek de listeyi genişletebilirsiniz."
+    },
+    {
+      "text": "2. Arama sonuçlarının altındaki 'İlgili aramalar' bölümünü not alın. Bu bölüm, sizin kullandığınız kelimeye yakın başka ifadeleri gösterir."
+    },
+    {
+      "text": "3. Sonuç sayfasında 'Benzer sorular' olarak görünen kutulardaki soruları ayrı bir listeye yazın. Bu sorular blog başlığı ve sık sorulan sorular bölümü için doğrudan malzeme olur."
+    },
+    {
+      "text": "Bu aşamanın amacı arama hacmini ölçmek değil, müşterilerinizin dilini öğrenmektir. Otuz ile elli arasında kelimeden oluşan bir ham liste, sonraki adımlar için yeterli bir başlangıçtır."
+    },
+    {
+      "heading": "Adım 2: Arama hacmini Google Ads Anahtar Kelime Planlayıcı ile ölçün",
+      "text": "Google Ads Anahtar Kelime Planlayıcı, kelime fikirleri bulmanızı ve elinizdeki kelimelerin tahmini aylık arama sayısını görmenizi sağlar. Google'ın yardım sayfasına göre aracın iki temel işlevi vardır: ürün, hizmet ya da web sitenize göre yeni kelime fikirleri bulmak ve kelime listesi girerek arama tahminlerini görmek. Aracı kullanmak için bir Google Ads hesabı gerekir; temel özellikler için hesap kurulumunu ve faturalandırma bilgilerini tamamlamanız istenir."
+    },
+    {
+      "text": "Burada en çok dikkat etmeniz gereken nokta, gördüğünüz rakamların tahmin olduğudur. Rakamları kelimeleri birbiriyle kıyaslamak için kullanın. 'Bu kelime ayda tam olarak şu kadar ziyaretçi getirir' diye bir beklenti kurmayın. Ülke olarak Türkiye'yi, dil olarak Türkçe'yi seçmeyi unutmayın."
+    },
+    {
+      "heading": "Adım 3: Google Trends ile ilginin yönünü görün",
+      "text": "Google Trends, bir kelimeye duyulan ilginin zaman içinde nasıl değiştiğini gösterir. Önemli bir ayrıntı var: Trends ham arama sayısı vermez. Verileri 0 ile 100 arasında, göreli bir ölçekte sunar ve kelimeleri birbirine kıyaslamak için kullanılır. Yani bir kelimenin grafiği yükseliyorsa ilgi arttığını, düşüyorsa azaldığını görürsünüz; ama bu grafikten kaç kişinin aradığını hesaplayamazsınız."
+    },
+    {
+      "text": "Trends'i iki işte kullanmanızı öneririz. Birincisi, mevsimsel işlerde ilginin yıl içinde ne zaman zirve yaptığını görmek ve yazınızı o zamana göre planlamak. İkincisi, iki farklı ifadeden hangisinin Türkiye genelinde daha fazla ilgi gördüğünü karşılaştırmak. Düşük hacimli kelimeler grafikte 0 görünebilir. Bu, kelimenin hiç aranmadığı anlamına gelmez; yalnızca Trends'in gösterecek kadar popüler bulmadığı anlamına gelir."
+    },
+    {
+      "heading": "Adım 4: Her kelimenin arama niyetini belirleyin",
+      "text": "Arama niyeti, kişinin o kelimeyi yazarken aslında ne istediğidir. Her kelimeyi dört gruptan birine koymak, hangi sayfa türünün uygun olacağını gösterir."
+    },
+    {
+      "text": "Bilgi amaçlı: 'SEO nedir', 'site haritası nasıl hazırlanır' gibi öğrenmek isteyen sorgular. Bunlar için rehber ya da blog yazısı uygundur."
+    },
+    {
+      "text": "Gezinme amaçlı: Belli bir marka, firma ya da sayfayı aramak. Bu aramalarda doğru sayfanızın kolayca bulunması yeterlidir."
+    },
+    {
+      "text": "Ticari araştırma: 'en iyi e-ticaret platformu', 'hazır web sitesi karşılaştırma' gibi satın almadan önce seçenekleri kıyaslayan sorgular. Karşılaştırma tablosu ve net seçim kriterleri içeren sayfalar bu niyete uyar."
+    },
+    {
+      "text": "İşlem amaçlı: 'web sitesi yaptırma teklifi' gibi hizmeti satın almaya yakın sorgular. Bunlar için hizmet sayfası ve kolay ulaşılabilir bir iletişim yolu gerekir."
+    },
+    {
+      "text": "Pratik bir kontrol yapın: Kelimeyi Google'da aratın ve ilk sayfada hangi tür sayfaların çıktığına bakın. Ürün ve hizmet sayfaları görüyorsanız, sizin de hizmet sayfanızla yarışmanız gerekir. Rehberler ve blog yazıları çıkıyorsa, o kelimeye bir rehber yazmak daha mantıklıdır."
+    },
+    {
+      "heading": "Adım 5: Rakip sayfalarda eksikleri bulun",
+      "text": "İlk sayfadaki üç ile beş sonucu açın ve başlıklarına bakın. Hangi soruyu cevaplamadıklarını, hangi örneği vermediklerini, hangi adımı atladıklarını not edin. Bu boşluklar, yazınızın gerçekten değer katabileceği yerlerdir."
+    },
+    {
+      "text": "Boşlukları kendi bilginizle doldurun: gerçek bir uygulama örneği, net bir karşılaştırma ya da sık yapılan hatalar gibi. Rakibin cümlelerini yeniden yazmak ise ne okuyucuya ne de arama motoruna bir şey katar. Google'ın faydalı içerik rehberi de başkalarının sözünü özetleyip çok az değer katan içeriği bir uyarı işareti olarak sayar; yazınızda kendi bilginiz, verileriniz ve deneyiminiz öne çıkmalıdır."
+    },
+    {
+      "heading": "Adım 6: Kelimeleri gruplayın ve sayfalara atayın",
+      "text": "Aynı amaca hizmet eden kelimeleri tek bir sayfada toplayın. Her sayfanın bir ana kelimesi ve birkaç yakın yan kelimesi olur. Örneğin 'hazır web sitesi' ile 'hazır web sitesi fiyatları' aynı niyete yakınsa tek sayfada ele alınabilir. Ama 'hazır web sitesi' ile 'e-ticaret sitesi kurmak' farklı bir ihtiyaçtır ve ayrı sayfa gerektirir."
+    },
+    {
+      "text": "Aynı ana kelimeyi iki ayrı sayfaya hedeflemek, sayfaların birbirine rakip olmasına yol açar ve ikisi de zayıf kalabilir. Bu yüzden her ana kelime için tek bir sorumlu sayfa belirleyin ve başka bir sayfa aynı kelimeye odaklanmasın."
+    },
+    {
+      "text": "Kelimeleri sayfaya yerleştirirken başlıkta, ilk paragrafta ve birkaç ara başlıkta doğal biçimde geçmeleri yeterlidir. Google, aynı ifadeleri cümle içinde tekrar tekrar kullanmanın kullanıcıyı yorduğunu ve spam politikalarına aykırı olduğunu belirtiyor. Ayrıca Google Arama, meta keywords etiketini kullanmaz; anahtar kelime listesi yazmak yerine sayfanın ne anlattığını açık bir cümleyle ifade etmek daha etkilidir."
+    },
+    {
+      "heading": "Adım 7: Listeyi önceliklendirin",
+      "text": "Elinizde elli kelime varsa hepsine aynı anda yazı yazmanız gerekmez. Her kelimeyi üç ölçütle 1 ile 3 arasında puanlayın."
+    },
+    {
+      "text": "1. Hizmet uyumu: Kelimeyi arayan kişi sunduğunuz hizmeti satın alabilir mi? Tam uyum varsa 3, uzaksa 1 verin."
+    },
+    {
+      "text": "2. Rekabet: İlk sayfada çok güçlü ve yerleşik siteler var mı? Yeni bir siteyseniz, daha az rekabet olan ve daha özgül kelimeler daha gerçekçi bir başlangıçtır. Rekabet zayıfsa 3, çok güçlüyse 1 verin."
+    },
+    {
+      "text": "3. İş değeri: Bu kelimeden gelecek bir ziyaretçi teklif talebine dönüşebilir mi? Olasılık yüksekse 3, düşükse 1 verin."
+    },
+    {
+      "text": "Üç puanı toplayın ve en yüksek puanlı kelimeden başlayın. Yalnızca arama hacmine bakarak sıralama yapmayın. Yüksek hacimli ama niyeti uymayan bir kelime çok ziyaretçi getirip hiç müşteri getirmeyebilir."
+    },
+    {
+      "heading": "Yayından sonra sonucu nasıl ölçersiniz?",
+      "text": "Kelime listesi bir kez hazırlanıp bir kenara bırakılan bir belge değildir. Yayına aldığınız sayfaların hangi kelimelerle göründüğünü Google Search Console'un Performans raporundan izleyin. Raporun Sorgular sekmesi, kullanıcıların sizi bulmak için yazdığı kelimeleri ve bu kelimelerdeki tıklama ile gösterim sayılarını gösterir. Varsayılan görünüm son üç ayı kapsar."
+    },
+    {
+      "text": "Ortalama konum, sitenizin ilgili aramada en üstteki sonucunun ortalama sırasını gösterir. Pratik bir öncelik sırası olarak, ortalama konumu 8 ile 20 arasında olan ve gösterimi yüksek kelimelere önce bakın. Bu kelimeler ilk sayfanın hemen dışındadır ve içeriği iyileştirerek ilk sayfaya taşınabilir. Bu sınır bir Google kuralı değil, uygulamada işe yarayan bir önceliklendirmedir."
+    },
+    {
+      "text": "Search Console henüz bağlı değilse, Google Search Console Nasıl Kurulur? yazımızdaki adımları izleyerek kurulumu tamamlayabilirsiniz."
+    },
+    {
+      "heading": "Sık yapılan hatalar",
+      "text": "Anahtar kelime çalışmalarında en sık karşılaşılan hatalar şunlardır:"
+    },
+    {
+      "text": "1. Yalnızca arama hacmine bakmak. Yüksek hacim, sizin müşteri olmayacak kişilerin aramasından da gelebilir."
+    },
+    {
+      "text": "2. Tek kelimelik ve çok genel terimleri hedeflemek. 'Web sitesi' gibi kelimeler çok rekabetlidir ve arayanın ne istediği belirsizdir. Yeni bir sitenin bu aramalarda öne çıkması zordur."
+    },
+    {
+      "text": "3. Kelimeleri metne yığmak. Aynı ifadeyi her paragrafta tekrarlamak metni okunmaz hale getirir ve Google'ın spam politikalarına aykırıdır. Google da sayfa açıklamasında anahtar kelime listesi yerine, sayfanın içeriğini anlatan açık cümlelerin daha faydalı olduğunu belirtir."
+    },
+    {
+      "text": "4. Bir sayfaya birden fazla amaç yüklemek. Hem fiyat karşılaştırması yapmaya hem de kavramı anlatmaya çalışan bir sayfa ikisinde de zayıf kalır."
+    },
+    {
+      "text": "5. Hiç ölçmemek. Yayından sonra Search Console'a bakmayan biri, hangi kelimenin işe yaradığını da bilemez."
+    },
+    {
+      "heading": "Kadıköy ve İstanbul'daki yerel işletmeler için bir not",
+      "text": "Yerel bir işletmeyseniz, kelimelerinize semt ya da ilçe adını eklemek mantıklı olabilir. Ancak her ilçe için aynı metni kopyalayıp yalnızca semt adını değiştirmek iyi bir fikir değildir. Google, belirli bölgeler ya da şehirler için kurulup kullanıcıyı tek bir sayfaya yönlendiren sayfaları spam politikası kapsamında ele alır. Yerel aramalarda daha etkili olan, önce Google İşletme Profili'nizi eksiksiz hazırlamaktır. Bu konuda Google İşletme Profili Nasıl Oluşturulur? yazımıza bakabilirsiniz."
+    },
+    {
+      "heading": "Kelime araştırmasını kendiniz mi yapmalısınız, yoksa destek mi almalısınız?",
+      "text": "Bu yazıdaki adımların her biri uygulanabilir. Ancak Google Ads hesabını açmak, Search Console kurulumunu yapmak ve rakip sayfaları düzenli olarak incelemek, işinizin yoğun olduğu dönemlerde ciddi zaman alır. İntegral Bilişim olarak SEO çalışmalarında kelime araştırması, sayfa planı ve Search Console takibini birlikte yürütebiliyoruz. Kendi sitenizin durumunu ve size uygun planı öğrenmek için iletişim sayfamızdan bize ulaşabilir ya da teklif talebi bırakabilirsiniz."
+    },
+    {
+      "heading": "Sık sorulan sorular",
+      "text": "Anahtar kelime araştırmasıyla ilgili sık sorulan soruların kısa yanıtları aşağıdadır."
+    },
+    {
+      "heading": "Anahtar kelime araştırması için ücretli araç şart mı?",
+      "text": "Hayır. Bu yazıda anlatılan yöntemlerin çoğu ücretsizdir: Google arama önerileri, İlgili aramalar, Google Trends ve Search Console'un temel özellikleri bunlara dahildir. Ücretli araçlar rakip analizi ve daha ayrıntılı veri için sonradan değerlendirilebilir."
+    },
+    {
+      "heading": "Anahtar kelime araştırmasını ne sıklıkla yapmalıyım?",
+      "text": "Ana listeyi yılda birkaç kez ya da işinizde ve sektörünüzde bir değişiklik olduğunda gözden geçirmek yeterlidir. Search Console sorgu raporuna ayda bir kez bakmak ise hangi kelimelerin yükseldiğini ve hangi sayfaların yeni kelimeler kazandığını görmek için iyi bir alışkanlıktır."
+    },
+    {
+      "heading": "Bir yazıda kaç anahtar kelime hedeflemeliyim?",
+      "text": "Tek bir ana kelime ve birkaç yakın yan kelime yeterlidir. Konuyu baştan sona iyi anlatan bir yazı, yan kelimelerin çoğunu zaten doğal olarak içerir. Kelimeleri zorlamak yerine konuyu eksiksiz anlatmaya odaklanın."
+    },
+    {
+      "heading": "Uzun kuyruklu anahtar kelime nedir, neden önemli?",
+      "text": "Üç ya da dört kelimeden oluşan, daha belirli aramalardır. Örneğin 'küçük işletme için hazır web sitesi' gibi. Bu tür aramaların hacmi daha düşüktür ama niyeti daha nettir ve genellikle daha az rekabet içerir. Yeni sitelerde bu kelimeler çoğu zaman daha gerçekçi bir başlangıç noktasıdır."
+    },
+    {
+      "heading": "Keyword Planner'daki rakamlara güvenebilir miyim?",
+      "text": "Rakamlar tahmini aylık aramalardır. Mutlak bir ziyaretçi sayısı olarak değil, kelimeleri birbirine göre kıyaslamak için kullanın. Kesin bir trafik öngörüsü için bu rakamlara dayanmayın."
+    }
+  ]
+}
