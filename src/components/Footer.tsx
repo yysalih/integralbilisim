@@ -114,10 +114,6 @@ export function Footer() {
                   <a href={`tel:${COMPANY.phoneMobile.replace(/\s/g, "")}`} className="hover:text-white">
                     {COMPANY.phoneMobile}
                   </a>
-                  <br />
-                  <a href={`tel:${COMPANY.phoneOffice.replace(/\s/g, "")}`} className="hover:text-white">
-                    {COMPANY.phoneOffice}
-                  </a>
                 </span>
               </li>
               <li className="flex gap-3">

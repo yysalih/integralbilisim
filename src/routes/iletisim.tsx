@@ -208,12 +208,6 @@ function ContactPage() {
                   {COMPANY.phoneMobile}
                 </a>
                 <a
-                  href={`tel:${COMPANY.phoneOffice.replace(/\s/g, "")}`}
-                  className="block hover:text-accent"
-                >
-                  {COMPANY.phoneOffice}
-                </a>
-                <a
                   href={`tel:${COMPANY.phoneMobile2.replace(/\s/g, "")}`}
                   className="block hover:text-accent"
                 >
