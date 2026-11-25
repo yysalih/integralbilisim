@@ -91,6 +91,7 @@ export const localBusinessSchema = () => ({
   email: COMPANY.email,
   priceRange: "₺₺",
   address: { "@type": "PostalAddress", ...COMPANY.addressParts },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.mapQuery)}`,
   areaServed: { "@type": "Country", name: "Türkiye" },
   openingHoursSpecification: [
     {

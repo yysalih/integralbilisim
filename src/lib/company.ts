@@ -10,6 +10,8 @@ export const COMPANY = {
   phoneMobile: "+90 533 590 35 32",
   email: "info@integralbilisim.com",
   address: "Esentepe Mah. Şht. Mehmet Mikdat Uluünlü Sok. No: 7, 34394 Şişli / İstanbul",
+  /** Harita ve yol tarifi aramasında kullanılan, Google'ın kendi biçimindeki adres. */
+  mapQuery: "Esentepe, Şht. Mehmet Mikdat Uluünlü Sok. No:7, 34394 Şişli/İstanbul",
   /** Yapısal veri (schema.org PostalAddress) için adresin parçaları; address ile aynı kalmalı. */
   addressParts: {
     streetAddress: "Esentepe Mah. Şht. Mehmet Mikdat Uluünlü Sok. No: 7",

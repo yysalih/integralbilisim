@@ -85,6 +85,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     body: [
       "Sitenin çalışması için zorunlu olan teknik çerezler dışında çerez, siteye ilk girişinizde verdiğiniz açık onayla kullanılır.",
       "Onay verirseniz ziyaretçi istatistiği için Google Analytics 4 (Google Ireland Limited) devreye girer. Hangi sayfaların görüntülendiği, sitede geçirilen süre, tahmini konum (ülke/şehir düzeyinde), cihaz ve tarayıcı türü ile telefon, WhatsApp ve form düğmelerine tıklanıp tıklanmadığı, teklif sihirbazında ve site analizi aracında hangi adımlara ulaşıldığı gibi kullanım bilgileri toplanır. Forma yazdığınız ad, e-posta, telefon ve mesaj gibi bilgiler Google Analytics'e gönderilmez; IP adresi anonimleştirilir. Bu bilgiler sizi kimliğinizle tanımlamak için kullanılmaz ve reklam amacıyla kullanılmaz.",
+      "İletişim sayfasındaki harita, siz \"Haritayı göster\" düğmesine basana kadar yüklenmez. Düğmeye bastığınızda Google Haritalar içeriği yüklenir ve bu içerik için Google'ın gizlilik politikası geçerli olur. \"Yol tarifi al\" bağlantısı ise yalnızca tıkladığınızda Google Haritalar'ı yeni sekmede açar.",
       "Onay vermediğiniz ya da \"Reddet\" dediğiniz sürece Google Analytics yüklenmez, Google'a herhangi bir istek gönderilmez ve site aynı şekilde çalışmaya devam eder. Tercihinizi tarayıcınızın site verilerini temizleyerek her zaman değiştirebilirsiniz.",
     ],
   },

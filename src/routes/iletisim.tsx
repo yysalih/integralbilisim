@@ -9,6 +9,7 @@ import { SERVICES } from "@/lib/services";
 import { cn } from "@/lib/utils";
 import { breadcrumbSchema, jsonLd, pageHead } from "@/lib/seo";
 import { ConsentFields } from "@/components/ConsentFields";
+import { ContactMap } from "@/components/ContactMap";
 import { getAttribution } from "@/lib/attribution";
 import { track } from "@/lib/track";
 
@@ -229,6 +230,8 @@ function ContactPage() {
               </a>
             </div>
           </div>
+
+          <ContactMap />
         </div>
       </section>
     </>
