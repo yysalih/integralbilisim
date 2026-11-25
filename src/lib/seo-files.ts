@@ -70,7 +70,7 @@ export const renderLlms = (posts: FeedPost[]): string => {
   const years = new Date().getFullYear() - COMPANY.foundedYear;
   return `# ${COMPANY.name}
 
-> ${COMPANY.foundedYear}'den beri Kadıköy / İstanbul'da faaliyet gösteren web tasarım, web yazılım ve dijital pazarlama ajansı. ${years} yıllık deneyim, 153 marka referansı.
+> ${COMPANY.foundedYear}'den beri İstanbul'da faaliyet gösteren web tasarım, web yazılım ve dijital pazarlama ajansı. ${years} yıllık deneyim, 153 marka referansı.
 
 ## Hakkında
 - Ticari unvan: ${COMPANY.fullName}

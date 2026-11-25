@@ -95,7 +95,7 @@ const ogMarkup = (opts: { eyebrow: string; title: string; note?: string; accent?
   </div>
   <div class="foot">
     <span>integralbilisim.com</span><span class="dot"></span>
-    <span>Kadıköy, İstanbul</span><span class="dot"></span><span>2007'den beri</span>
+    <span>Şişli, İstanbul</span><span class="dot"></span><span>2007'den beri</span>
   </div>
   <div class="rule"></div>
 </div>`;
@@ -199,7 +199,7 @@ const cards: { file: string; eyebrow: string; title: string; note?: string; acce
     file: "iletisim",
     eyebrow: "İletişim",
     title: "Projenizi birlikte konuşalım",
-    note: "Kadıköy'deki ofisimizden Türkiye'nin her yerine hizmet veriyoruz.",
+    note: "Şişli'deki ofisimizden Türkiye'nin her yerine hizmet veriyoruz.",
   },
   { file: "gizlilik-politikasi", eyebrow: "Kurumsal", title: "Gizlilik Politikası ve KVKK Aydınlatma Metni" },
 ];

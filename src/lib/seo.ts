@@ -75,13 +75,7 @@ export const organizationSchema = () => ({
   description: `${COMPANY.foundedYear}'den beri web tasarım, web yazılım, e-ticaret ve dijital pazarlama hizmetleri veren ${yearsInBusiness()} yıllık bilişim ajansı.`,
   email: COMPANY.email,
   telephone: COMPANY.phoneMobile,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Fikirtepe Mah. Mandıra Cad. Mandarins B Blok No: 11 İç Kapı No: 67",
-    addressLocality: "Kadıköy",
-    addressRegion: "İstanbul",
-    addressCountry: "TR",
-  },
+  address: { "@type": "PostalAddress", ...COMPANY.addressParts },
   sameAs: Object.values(COMPANY.social),
 });
 
@@ -96,13 +90,7 @@ export const localBusinessSchema = () => ({
   telephone: COMPANY.phoneMobile,
   email: COMPANY.email,
   priceRange: "₺₺",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Fikirtepe Mah. Mandıra Cad. Mandarins B Blok No: 11 İç Kapı No: 67",
-    addressLocality: "Kadıköy",
-    addressRegion: "İstanbul",
-    addressCountry: "TR",
-  },
+  address: { "@type": "PostalAddress", ...COMPANY.addressParts },
   areaServed: { "@type": "Country", name: "Türkiye" },
   openingHoursSpecification: [
     {

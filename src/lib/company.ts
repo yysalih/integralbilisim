@@ -11,8 +11,15 @@ export const COMPANY = {
   phoneOffice: "0216 410 55 33",
   phoneMobile2: "0554 959 50 55",
   email: "info@integralbilisim.com",
-  address:
-    "Fikirtepe Mah. Mandıra Cad. Mandarins B Blok No: 11 İç Kapı No: 67 Kadıköy / İstanbul",
+  address: "Esentepe Mah. Şht. Mehmet Mikdat Uluünlü Sok. No: 7, 34394 Şişli / İstanbul",
+  /** Yapısal veri (schema.org PostalAddress) için adresin parçaları; address ile aynı kalmalı. */
+  addressParts: {
+    streetAddress: "Esentepe Mah. Şht. Mehmet Mikdat Uluünlü Sok. No: 7",
+    postalCode: "34394",
+    addressLocality: "Şişli",
+    addressRegion: "İstanbul",
+    addressCountry: "TR",
+  },
   workingHours: "Pazartesi - Cuma, 09:00 - 18:00",
   whatsappNumber: "905335903532",
   social: {

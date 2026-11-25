@@ -46,6 +46,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Sadece İstanbul'da mı çalışıyorsunuz?",
     answer:
-      "Merkezimiz Kadıköy / İstanbul'da. Türkiye'nin farklı şehirlerinden markalarla çalışıyoruz; süreci uzaktan da yürütebiliyoruz.",
+      "Merkezimiz Şişli / İstanbul'da. Türkiye'nin farklı şehirlerinden markalarla çalışıyoruz; süreci uzaktan da yürütebiliyoruz.",
   },
 ];

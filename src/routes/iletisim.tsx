@@ -17,7 +17,7 @@ export const Route = createFileRoute("/iletisim")({
     const base = pageHead({
       title: "İletişim | İntegral Bilişim",
       description:
-        "Teklif almak veya sorularınız için bize ulaşın. Telefon, WhatsApp, e-posta. Kadıköy / İstanbul.",
+        "Teklif almak veya sorularınız için bize ulaşın. Telefon, WhatsApp, e-posta. Şişli / İstanbul.",
       path: "/iletisim",
       image: "/og/iletisim.png",
     });
