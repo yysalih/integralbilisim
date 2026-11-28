@@ -1,0 +1,263 @@
+{
+  "slug": "e-ticaret-urun-sayfasi-seo-nasil-yapilir",
+  "title": "E-Ticaret Ürün Sayfası SEO'su Nasıl Yapılır? Adım Adım Rehber",
+  "category": "E-Ticaret",
+  "accent": "#10B981",
+  "excerpt": "E-ticaret ürün sayfası SEO'su nasıl yapılır? URL, başlık, özgün açıklama, görsel, ürün verisi, varyant ve stok konularını KOBİ'ler için sade adımlarla anlatıyoruz.",
+  "body": [
+    {
+      "text": "E-ticaret ürün sayfası SEO'su, her ürün sayfasının arama motorları tarafından doğru anlaşılıp doğru kişilere gösterilmesi için yapılan düzenlemelerin bütünüdür. Başlık, adres, özgün açıklama, görseller, ürün verileri, varyantlar ve iç bağlantılar bu işin ana parçalarıdır. Aşağıda bu parçaları, teknik bilgisi sınırlı bir ekibin uygulayabileceği bir sırayla anlatıyoruz."
+    },
+    {
+      "heading": "Önce doğru sayfayı seçin: ürün sayfası mı, kategori sayfası mı?",
+      "text": "Ürün sayfası, belirli bir ürünü arayan kişiye yöneliktir. Marka ve model adı, ürün kodu ya da belirli bir özellikle yapılan aramalar buna örnektir. 'Kadın spor ayakkabı' gibi genel bir aramada ise kategori sayfası ya da satın alma rehberi daha uygun bir sayfa türüdür. Google'ın ürün yapılandırılmış verisi belgesinde, ürün zengin sonuçlarının yalnızca tek bir ürüne ya da aynı ürünün varyantlarına odaklanan sayfalar için desteklendiği belirtiliyor."
+    },
+    {
+      "text": "1. Her ürün sayfası için hedef aramayı tek cümleyle yazın. Örneğin 'X marka Y model kablosuz kulaklık' gibi."
+    },
+    {
+      "text": "2. Bu aramayı Google'da yapın ve ilk sonuçlara bakın. Ürün sayfaları çıkıyorsa ürün sayfası hazırlayın; rehber ve listeler çıkıyorsa genel bir kategori ya da rehber sayfası düşünün."
+    },
+    {
+      "text": "3. Aynı amaçlı iki sayfa açmayın. İki ürün sayfası aynı aramayı hedefliyorsa aralarında rekabet doğar; birini diğerinin yerine koyun ya da birleştirin."
+    },
+    {
+      "heading": "Ürün adresi (URL) kısa, okunabilir ve kalıcı olmalı",
+      "text": "Google, e-ticaret rehberinde kalıcı adresleri ve URL yollarında açıklayıcı kelimeleri öneriyor. Google'ın örneklerinde de /product/3243 gibi yalnızca sayısal kimlik içeren adresler yerine ürün adını taşıyan yollar gösteriliyor. Adresi okuyan kişi, sayfanın konusunu tıklamadan önce anlayabilmelidir."
+    },
+    {
+      "text": "1. Ürün adını sadeleştirin ve gereksiz kelimeleri çıkarın. 'Siyah Deri Cüzdan (Yeni Sezon)' yerine 'siyah-deri-cuzdan' gibi kısa bir yol seçin."
+    },
+    {
+      "text": "2. Oturum kimliği, takip kodu ya da filtre parametreleri gibi geçici bağlantıları iç bağlantılarda kullanmayın. Google, kalıcı adresler kullanılmasını bu yüzden öneriyor."
+    },
+    {
+      "text": "3. Yayındaki bir ürünün adresini değiştirmeniz gerekiyorsa eski adresi yeni adrese kalıcı yönlendirmeyle bağlayın. Aksi halde o adrese gelen ziyaretçiler ve dış bağlantılar boşa gider."
+    },
+    {
+      "heading": "Başlık (title) ve sayfa başlığı (H1) nasıl yazılır?",
+      "text": "Başlık, arama sonuçlarında kullanıcıya ilk gösterilen metindir ve ürünü dürüstçe, kısaca tanımlamalıdır. Google, title etiketleri için açıklayıcı ve öz metin yazılmasını öneriyor; 'Ana sayfa' ya da 'Profil' gibi belirsiz ifadelerden kaçınılmasını söylüyor. Anahtar kelimeleri üst üste yığmak ise sayfayı spam gibi gösterebilir. Google başlık uzunluğu için bir sınır koymuyor, ama uzun başlıklar arama sonuçlarında kısaltılıyor. Biz genellikle 60-70 karakter civarını yeterli buluyoruz."
+    },
+    {
+      "text": "1. Başlığı şu sırayla kurun: ürün adı, model ya da varyant bilgisi, marka. Örnek: 'Siyah Deri Cüzdan, Ön Cepli, Marka X'."
+    },
+    {
+      "text": "2. Aynı kelimeyi başlıkta birden fazla kez tekrarlamayın. Google da aynı kelime ve ifadelerin tekrar edilmesine gerek olmadığını belirtiyor."
+    },
+    {
+      "text": "3. Sayfadaki ana başlık (H1) ürün adıyla uyumlu olsun. Birebir aynı olmak zorunda değil, ama başlık ile H1 birbirinden çok uzaklaşmasın; ziyaretçi arama sonucunda gördüğü vaadi sayfada da görsün."
+    },
+    {
+      "heading": "Üretici açıklamasını kopyalamayın, özgün açıklama yazın",
+      "text": "Birçok e-ticaret sitesi ürün açıklamasını üreticinin ya da toptancının hazır metninden alıyor. Aynı metin aynı ürünü satan onlarca sitede yer alıyorsa, aramada hangi sayfanın öne çıkacağı belirsizleşir ve kullanıcı için de yeni bir bilgi kalmaz. Kopya metin, sayfanızı tekrar eden içerikten biri yapar. Çözüm, hazır metni bir kaynak olarak kullanıp üzerine kendi bilginizi eklemektir."
+    },
+    {
+      "text": "Özgün açıklamada ürünün kullanım alanı, ölçü ve uyumluluk bilgisi, kutudan çıkanlar ve bakım önerisi gibi başlıklar yer almalı. Bunların hepsi müşterinin satın alma kararını kolaylaştırır."
+    },
+    {
+      "text": "1. Üretici metninden yalnızca teknik bilgileri alın ve cümleleri kendi ağzınızla yeniden kurun."
+    },
+    {
+      "text": "2. Müşterilerin ürünle ilgili sorduğu soruları satış ekibinizden, mesajlardan ve yorumlardan toplayın. Bunları kısa bir soru-cevap bölümü olarak açıklamaya ekleyin."
+    },
+    {
+      "text": "3. Anahtar kelimeleri her paragrafa sıkıştırmayın. Açıklamayı önce okuyucu için yazın; doğal ve bilgi dolu bir metin, hem kullanıcıya hem arama motorlarına daha iyi anlatır."
+    },
+    {
+      "heading": "Görseller ve alt metinler",
+      "text": "Ürün görselleri hem satın alma kararını etkiler hem de Google Görseller'de görünme fırsatıdır. Google, ürünü açıkça gösteren fotoğrafları tercih ettiğini ve beyaz arka plan önünde çekilmiş görsellerin bu açıdan iyi bir örnek olduğunu belirtiyor. Alt metin ise görselin ne gösterdiğini betimlemek için vardır; ekran okuyucu kullanan ziyaretçiler de bu metni dinler. Google, alt metinlerin anahtar kelimelerle doldurulmamasını istiyor, çünkü bu hem kullanıcı deneyimini bozar hem de sayfanın spam gibi görünmesine yol açabilir."
+    },
+    {
+      "text": "1. Her ürün için en az bir net ana görsel kullanın. Ürünün tamamını, mümkünse düz bir arka plan önünde gösterin."
+    },
+    {
+      "text": "2. Alt metni, görselde gerçekten ne olduğunu anlatacak şekilde yazın. Örneğin 'Siyah deri cüzdanın ön yüzü, kart bölmeleri açık' gibi."
+    },
+    {
+      "text": "3. Dosyaları yüklemeden önce sıkıştırın. Yüksek çözünürlük önemlidir, ancak sayfa yavaşlıyorsa dosya boyutunu küçültün. Hız konusunu aşağıda ayrıca ele alıyoruz."
+    },
+    {
+      "heading": "Varyantlar: renk ve beden için ayrı adres mi açmalıyım?",
+      "text": "Bir ürünün rengi ya da bedeni farklıysa her varyant için ayrı bir adres açabilirsiniz, ama bu zorunlu değildir. Google, her varyantın ayrı bir adresle tanımlanabileceğini belirtiyor. Bu yolu seçerseniz her varyant sayfasında ana ürün adresine işaret eden bir canonical etiketi kullanmanız gerekir. Varyantı adres parametresiyle (örneğin ?renk=kirmizi) gösteriyorsanız, canonical adres parametresiz ana adres olmalıdır. Hangi yöntemi seçerseniz seçin, aynı ürün için birbirinin kopyası çok sayıda sayfa açmaktan kaçının."
+    },
+    {
+      "text": "1. Her varyant için gerçek bir arama talebi olup olmadığını kontrol edin. 'Kırmızı kanvas ayakkabı 42' gibi sorgular aranıyorsa ayrı sayfa mantıklı olabilir."
+    },
+    {
+      "text": "2. Talep yoksa tek ürün sayfasında renk ve beden seçeneklerini gösterin."
+    },
+    {
+      "text": "3. Ayrı sayfa açtıysanız her varyant sayfasına ana ürünün adresini gösteren canonical etiketi ekleyin. Etiketin doğru çıktığını, sayfanın kaynak kodunu açarak kontrol edin."
+    },
+    {
+      "heading": "Ürün yapılandırılmış verisi (Product) nedir ve nasıl eklenir?",
+      "text": "Yapılandırılmış veri, sayfadaki bilgiyi arama motorlarının okuyabileceği bir biçimde ayrı bir kod bloğu olarak tarif etmenin yoludur. Ürün için bu; ürün adı, görseli, fiyatı, para birimi ve stok durumunun Product biçiminde yazılması demektir. Google'ın belgesine göre satış yapılan bir ürün için ad, görsel ve teklif (Offer) bilgisi gereklidir. Teklifte fiyat sıfırdan büyük olmalı ve para birimi üç harfli ISO 4217 koduyla (örneğin TRY) yazılmalıdır. Stok durumu (availability) ise önerilen alanlar arasında yer alır."
+    },
+    {
+      "text": "Google ayrıca bu verinin sayfanın ilk HTML'inde bulunmasını öneriyor; yalnızca tarayıcıda sonradan JavaScript ile üretilen veriler taramalarda daha az güvenilir kalabilir. Bir sayfada birden fazla ürün listeleniyorsa, ürün işaretlemesini tek ürün sayfalarına eklemek daha doğrudur."
+    },
+    {
+      "text": "1. Ürün sayfanızda ürün adı, görsel, fiyat, para birimi ve stok durumunu doldurun."
+    },
+    {
+      "text": "2. Bu bilgilerin, sayfa ilk açıldığında HTML içinde görünür olmasını sağlayın."
+    },
+    {
+      "text": "3. Yazdığınız işaretlemeyi Google'ın zengin sonuç test aracıyla kontrol edin. Sayfada görünen fiyat ile işaretlemedeki fiyat aynı olmalıdır."
+    },
+    {
+      "heading": "Fiyat ve stok bilgisi güncel kalmalı",
+      "text": "Fiyat ve stok, ziyaretçinin sayfaya gelir gelmez sormak istediği iki bilgidir. Eski bir fiyat ya da yanlış stok durumu hem müşteriyi hayal kırıklığına uğratır hem de arama sonucunda yanıltıcı bir vaat anlamına gelir. Fiyat ve stok bilgisini Google Merchant Center ürün beslemesiyle de paylaşmak, güncellemelerin daha düzenli ulaşmasına yardımcı olabilir."
+    },
+    {
+      "text": "1. Fiyat ya da stok değiştiğinde sayfayı aynı gün güncelleyin."
+    },
+    {
+      "text": "2. Stoğu biten ürünü hemen silmek yerine sayfada 'stokta yok' durumunu gösterin ve benzer ürünleri önerin. Bu hem ziyaretçiyi hem de sayfayı korur."
+    },
+    {
+      "text": "3. Ürün kalıcı olarak kaldırılacaksa boş bir 'ürün bulunamadı' sayfası bırakmayın. Yakın bir alternatifi varsa oraya, yoksa ilgili kategori sayfasına kalıcı yönlendirme yapın."
+    },
+    {
+      "heading": "Yorumlar ve puanlar güven oluşturur",
+      "text": "Gerçek müşteri yorumları, kullanıcının karar vermesine yardım eder ve sayfaya özgün içerik ekler. Google da ürün sayfalarında kaliteli ürün yorumları yazılmasını öneriyor. Yorum sayısını artırmak için teslimattan birkaç gün sonra kısa bir hatırlatma mesajı gönderebilirsiniz. Sahte yorum yazmak ya da yorum satın almak ise kullanıcıyı yanıltır ve markaya duyulan güveni zedeler."
+    },
+    {
+      "text": "1. Olumsuz yorumları silmeyin. Kısa, dürüst ve çözüm odaklı bir yanıt verin."
+    },
+    {
+      "text": "2. Yorum isteğini, ürünü teslim ettikten birkaç gün sonra tek bir kısa mesajla yapın. Her satışta tekrar tekrar istemeyin."
+    },
+    {
+      "text": "3. Puan ve yorum bölümünün görünür olduğunu ve ürün verisiyle uyumlu çalıştığını kontrol edin. Puan alanını yalnızca gerçek yorumlara dayanarak işaretleyin."
+    },
+    {
+      "heading": "İç bağlantılar ve kategori yapısı nasıl kurulmalı?",
+      "text": "Google, menülerden kategori sayfalarına, kategori sayfalarından alt kategorilere ve oradan her ürün sayfasına bağlantı kurulmasını öneriyor. Dizine alınmasını istediğiniz tüm ürünlere bağlantı verilmesini de özellikle tavsiye ediyor. Gezinme bağlantılarının standart bağlantı etiketiyle yapılması da önemlidir; JavaScript olaylarıyla çalışan gezinmeler arama motorları için görünmez kalabilir."
+    },
+    {
+      "text": "1. Her ürünü ait olduğu alt kategoriye ve ana kategoriye bağlayın. Sayfada görünen bir kategori yolu hem ziyaretçiye hem arama motoruna yardımcı olur."
+    },
+    {
+      "text": "2. Ürün sayfasına benzer ürünleri ekleyin. Ürünle ilgili bir rehber yazınız varsa, ona da bağlantı verin."
+    },
+    {
+      "text": "3. Bağlantıları standart bağlantı etiketiyle kurun. Menü ve kategori bağlantılarının JavaScript olayı yerine gerçek bağlantı olarak çalıştığını kontrol edin."
+    },
+    {
+      "text": "Site yapısını baştan planlamak istiyorsanız E-Ticaret Sitesi Nasıl Kurulur? KOBİ'ler İçin Adım Adım Rehber yazımızda kategori planlamasına dair adımları bulabilirsiniz. Arama niyetini ve sorguları nasıl bulacağınızı ise Anahtar Kelime Araştırması Nasıl Yapılır? Adım Adım Rehber yazımızda anlattık."
+    },
+    {
+      "heading": "Sayfa hızı ve Core Web Vitals: ürün sayfaları neden zorlanır?",
+      "text": "Ürün sayfaları çoğunlukla büyük görseller ve birçok üçüncü taraf betik içerdiği için hız sorunlarının en sık görüldüğü sayfa türüdür. Google'ın Core Web Vitals hedefleri üç ölçüme dayanıyor. Sayfanın ana içeriği en geç 2,5 saniye içinde yüklenmeli (LCP), etkileşime 200 milisaniyenin altında yanıt verilmeli (INP) ve görsel kayma 0,1 puanın altında kalmalıdır (CLS). Bu eşikler iyi bir kullanıcı deneyimi için Google'ın belirlediği hedeflerdir."
+    },
+    {
+      "text": "1. Sayfadaki en büyük görseli, ekranda görüneceği ölçüye göre boyutlandırın. Ürün görseli çoğu zaman sayfanın yüklenme hızını belirleyen öğedir."
+    },
+    {
+      "text": "2. Görselleri WebP ya da AVIF gibi modern biçimlerde sunun ve genişlik ile yükseklik bilgilerini belirtin. Bu, sayfa yüklenirken içeriğin kaymasını önler."
+    },
+    {
+      "text": "3. Kullanılmayan üçüncü taraf betikleri kaldırın. Eski reklam etiketleri ve kullanılmayan kaydırıcı kütüphaneleri çoğu zaman bu gruptadır."
+    },
+    {
+      "text": "4. Kontrolleri önce mobilde yapın. Ziyaretçilerinizin önemli bir kısmı mobilden geziyorsa, sorunların çoğu da orada ortaya çıkar."
+    },
+    {
+      "heading": "Ürün sayfası SEO'sunda sık yapılan hatalar",
+      "text": "Aynı hatalar çok sayıda e-ticaret sitesinde tekrar ediyor. Aşağıdakilerden birkaçını sitenizde kontrol etmek, kısa sürede düzeltilebilecek sorunları ortaya çıkarabilir."
+    },
+    {
+      "text": "1. Tüm ürünlerde aynı açıklamanın ya da aynı başlık kalıbının kullanılması."
+    },
+    {
+      "text": "2. Anahtar kelimelerin başlık, açıklama ve alt metinlerde üst üste yığılması."
+    },
+    {
+      "text": "3. Renk ve beden varyantları için aynı metni taşıyan çok sayıda sayfa açılması ve canonical etiketinin kullanılmaması."
+    },
+    {
+      "text": "4. Stokta olmayan ürünlerde hata sayfası ya da boş bir sayfa gösterilmesi."
+    },
+    {
+      "text": "5. Fiyatın ya da ürün adının yalnızca JavaScript ile yüklenmesi."
+    },
+    {
+      "text": "6. Görsellerde alt metnin boş bırakılması ya da dosya adlarının 'IMG_4521' gibi anlamsız kalması."
+    },
+    {
+      "text": "7. Ürün sayfalarına hiç iç bağlantı verilmemesi; sayfaların yalnızca site haritasıyla bulunabilir kalması."
+    },
+    {
+      "heading": "Önce hangi ürünlerle başlamalı?",
+      "text": "Yüzlerce ürünü aynı anda düzenlemek hem zaman hem emek gerektirir. Bunun yerine en çok satan ya da en çok ilgi gören ürünlerden başlamak daha verimlidir. Google Search Console, hangi sorgulardan tıklama aldığınızı ve sıralamanızın nerede olduğunu gösterir. Kurulumunu Google Search Console Nasıl Kurulur? KOBİ'ler İçin Adım Adım Rehber yazımızda anlattık."
+    },
+    {
+      "text": "1. Satış verilerinizden en çok satan ürünleri seçin."
+    },
+    {
+      "text": "2. Search Console'da bu ürünlerin adlarını içeren sorgulara bakın. Tıklama alıp sıralaması düşük kalan sorgular, hızlı iyileştirme için iyi adaylardır."
+    },
+    {
+      "text": "3. Düzenlemeleri bu ürünlerde tamamlayın, sonuçlarını izleyin ve ardından diğer ürünlere geçin."
+    },
+    {
+      "heading": "Kontrol listesi: yayından önce bakın",
+      "text": "Her ürün sayfası için aşağıdaki soruları sırayla yanıtlayın. 'Hayır' yanıtı aldığınız maddeleri bir not defterine yazıp düzeltin."
+    },
+    {
+      "text": "1. Sayfa tek bir ürünü mü anlatıyor?"
+    },
+    {
+      "text": "2. Adres, ürün adını okunabilir biçimde içeriyor mu?"
+    },
+    {
+      "text": "3. Başlık, ürünü dürüstçe ve tek bakışta anlatıyor mu?"
+    },
+    {
+      "text": "4. Açıklama, üreticinin metninden farklı ve özgün bilgi içeriyor mu?"
+    },
+    {
+      "text": "5. Görseller net ve alt metinler gerçek görseli anlatıyor mu?"
+    },
+    {
+      "text": "6. Fiyat, para birimi ve stok durumu sayfada ve yapılandırılmış veride aynı mı?"
+    },
+    {
+      "text": "7. Varyantlar için doğru canonical etiketi kullanılmış mı?"
+    },
+    {
+      "text": "8. Sayfaya kategori ve en az bir ilgili ürün bağlantısı verilmiş mi?"
+    },
+    {
+      "text": "9. Sayfa mobilde hızlı açılıyor mu?"
+    },
+    {
+      "heading": "Sık sorulan sorular",
+      "text": "Ürün sayfası SEO'suna dair sık sorulan soruların kısa yanıtları aşağıda."
+    },
+    {
+      "heading": "Ürün sayfası SEO'su ne kadar sürede sonuç verir?",
+      "text": "Arama motorlarının yeni ya da değişen sayfaları taraması ve sıralamanın oturması zaman alır. Kesin bir süre söylemek mümkün değildir. Düzenlemelerin etkisini Search Console'daki tıklama ve sıralama verilerinden takip edin. Sonuçlar, sayfanın rekabet durumuna ve yapılan değişikliklerin kapsamına göre değişir."
+    },
+    {
+      "heading": "Yapılandırılmış veri olmadan ürün sayfası SEO'su yapılabilir mi?",
+      "text": "Evet. Başlık, adres, özgün açıklama, görseller ve iç bağlantılar, yapılandırılmış veri olmadan da sayfanızın doğru anlaşılmasını sağlar. Yapılandırılmış veri ise ürün ayrıntılarının arama sonuçlarında zengin bir biçimde gösterilmesine uygunluk kazandırabilir. Bu sonuçların ne zaman ve nasıl gösterileceğine Google karar verir, bunu garanti edemezsiniz."
+    },
+    {
+      "heading": "Kategori sayfası için de aynı kurallar geçerli mi?",
+      "text": "Büyük ölçüde evet. Açıklayıcı başlık, düzgün adres, özgün giriş metni ve iç bağlantılar kategori sayfaları için de önemlidir. Kategori sayfası genel aramaları hedeflediği için, alt kategorilere ve ilgili rehber yazılara bağlantı vermek ürün sayfasından farklı bir işe yarar."
+    },
+    {
+      "heading": "Aynı ürünü hem pazar yerinde hem kendi sitemde satıyorum. Kopya içerik sorunu olur mu?",
+      "text": "Aynı açıklamanın iki yerde yer alması, hangi sayfanın öne çıkacağı konusunda belirsizlik yaratabilir. Kendi sitenizdeki açıklamayı özgünleştirmek, pazar yerindeki ürün metnine kıyasla kendi sayfanıza ek bilgi katmak bu sorunu azaltır."
+    },
+    {
+      "heading": "Sonuç",
+      "text": "Ürün sayfası SEO'su tek seferlik bir iş değil; her yeni ürünle ve her fiyat değişikliğiyle sürdürülen bir düzendir. Başlık, adres, özgün açıklama ve güncel stok bilgisi gibi temel işleri düzgün kurduğunuzda, sonraki adımlar daha kolay ilerler."
+    },
+    {
+      "text": "İntegral Bilişim olarak e-ticaret sitelerinde ürün sayfası yapısını, başlık ve açıklama düzenini ve teknik SEO kontrollerini birlikte değerlendirebiliriz. Mevcut ürün sayfalarınız için bir inceleme istiyorsanız İletişim sayfamızdan bize ulaşabilirsiniz."
+    }
+  ]
+}
